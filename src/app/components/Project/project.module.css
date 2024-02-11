@@ -1,0 +1,34 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_section {
+  position: relative;
+  cursor: zoom-in;
+  width: 100%;
+  transition: 500ms;
+  mask: linear-gradient(135deg, #000e 40%, #000, #000e 60%) 100% 100%/ 240% 240%;
+}
+
+.image_section:hover {
+  mask-position: 0 0;
+}
+
+.expand_icon {
+  opacity: 0;
+}
+
+.image_section:hover .expand_icon {
+  opacity: 1;
+}
+
+.expand_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.05);
+}
