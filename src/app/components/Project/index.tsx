@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Expand } from "@styled-icons/fa-solid/Expand";
-import { Project as ProjectModel } from "@/app/models";
+import { Project as ProjectModel } from "@/app/models/project";
 import styles from "./project.module.css";
 import DetailedProjectModal from "./DetailedProjectModal";
 import { useCallback, useState } from "react";

@@ -5,6 +5,7 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --bg-color: hsl(240 10% 3.9%);
+  --bg-secondary-color: #161616;
   --text-primary: #fafafa;
   --text-secondary: #888888;
 }
@@ -32,6 +33,16 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary-color);
+  border-radius: .5rem;
 }
 
 .container {
