@@ -1,35 +1,35 @@
-import { ProjectTech, TechType } from "@/app/models/project";
 import Box, { Props as BoxLink } from "@/app/components/Box";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import styles from "./tech-list.module.css";
 import { populateLinksIcon } from "../utils";
+import { Tech, Techs } from "@/app/models/tech";
 
 interface Props {
-  list: ProjectTech[];
+  list: Tech[];
 }
 
 const TECHS_TYPE_ORDER = [
-  TechType.Frontend,
-  TechType.Backend,
-  TechType.Testing,
-  TechType.Infra,
-  TechType.Services,
-  TechType.Utilities,
-  TechType.MachineLearning,
+  Techs.Frontend,
+  Techs.Backend,
+  Techs.Testing,
+  Techs.Infra,
+  Techs.Services,
+  Techs.Utilities,
+  Techs.MachineLearning,
 ];
 
-const TECH_TYPE_COLOR: Record<TechType, string> = {
-  [TechType.Frontend]: "rgba(0, 0, 255, .6)", // Blue
-  [TechType.Backend]: "rgba(0, 128, 0, .6)", // Green
-  [TechType.Testing]: "rgba(255, 0, 0, .6)", // Red
-  [TechType.Infra]: "rgba(128, 0, 128, .6)", // Purple
-  [TechType.Services]: "rgba(255, 165, 0, .6)", // Orange
-  [TechType.Utilities]: "rgba(255, 255, 0, .6)", // Yellow
-  [TechType.MachineLearning]: "rgba(255, 192, 203, .6)", // Pink
+const TECH_TYPE_COLOR: Record<Techs, string> = {
+  [Techs.Frontend]: "rgba(0, 0, 255, .6)", // Blue
+  [Techs.Backend]: "rgba(0, 128, 0, .6)", // Green
+  [Techs.Testing]: "rgba(255, 0, 0, .6)", // Red
+  [Techs.Infra]: "rgba(128, 0, 128, .6)", // Purple
+  [Techs.Services]: "rgba(255, 165, 0, .6)", // Orange
+  [Techs.Utilities]: "rgba(255, 255, 0, .6)", // Yellow
+  [Techs.MachineLearning]: "rgba(255, 192, 203, .6)", // Pink
 };
 
-const clusterTechs = (techs: ProjectTech[]): ProjectTech[] => {
-  const clusteredTechs: ProjectTech[] = [];
+const clusterTechs = (techs: Tech[]): Tech[] => {
+  const clusteredTechs: Tech[] = [];
 
   for (const techType of TECHS_TYPE_ORDER) {
     for (const tech of techs) {
@@ -62,13 +62,10 @@ const computeRectRelativePosition = (
 };
 
 interface ClusterRect extends Rect {
-  type: TechType;
+  type: Techs;
 }
 
-const computeClustersRects = (
-  list: ProjectTech[],
-  rects: Rect[]
-): ClusterRect[][] => {
+const computeClustersRects = (list: Tech[], rects: Rect[]): ClusterRect[][] => {
   console.log(list.length, rects.length);
   if (list.length === 0) return [];
   if (list.length !== rects.length) return [];

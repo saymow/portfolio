@@ -17,7 +17,7 @@ import { Browser } from "@styled-icons/entypo/Browser";
 import { Numpy } from "@styled-icons/simple-icons/Numpy";
 import { Tensorflow } from "@styled-icons/simple-icons/Tensorflow";
 import { Python } from "@styled-icons/fa-brands/Python";
-import { Links } from "../models/links";
+import { Links } from "../models/link";
 
 const LINK_ICON_MAP: Record<Links, StyledIcon> = {
   [Links.Live]: Browser,

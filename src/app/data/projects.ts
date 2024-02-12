@@ -1,5 +1,6 @@
-import { Project, TechType } from "../models/project";
-import { Links } from "../models/links";
+import { Project } from "../models/project";
+import { Links } from "../models/link";
+import { Techs } from "../models/tech";
 
 export const projects: Project[] = [
   {
@@ -17,67 +18,67 @@ export const projects: Project[] = [
       {
         kind: Links.Node,
         url: "https://nodejs.org/en/",
-        type: TechType.Backend,
+        type: Techs.Backend,
       },
       {
         kind: Links.React,
         url: "https://reactjs.org/",
-        type: TechType.Frontend,
+        type: Techs.Frontend,
       },
       {
         kind: Links.Typescript,
         url: "https://www.typescriptlang.org/",
-        type: TechType.Frontend,
+        type: Techs.Frontend,
       },
       {
         kind: Links.Nextjs,
         url: "https://nextjs.org/",
-        type: TechType.Frontend,
+        type: Techs.Frontend,
       },
       {
         kind: Links.Cypress,
         url: "https://www.cypress.io/",
-        type: TechType.Testing,
+        type: Techs.Testing,
       },
       {
         kind: Links.Postgresql,
         url: "https://www.postgresql.org/",
-        type: TechType.Infra,
+        type: Techs.Infra,
       },
       {
         kind: Links.Paypal,
         url: "https://www.paypal.com/",
-        type: TechType.Services,
+        type: Techs.Services,
       },
       {
         kind: Links.Jest,
         url: "https://jestjs.io/",
-        type: TechType.Testing,
+        type: Techs.Testing,
       },
       {
         kind: Links.Redux,
         url: "https://redux.js.org/",
-        type: TechType.Frontend,
+        type: Techs.Frontend,
       },
       {
         kind: Links.StyledComponents,
         url: "https://styled-components.com/",
-        type: TechType.Frontend,
+        type: Techs.Frontend,
       },
       {
         kind: Links.Bootstrap,
         url: "https://getbootstrap.com/",
-        type: TechType.Frontend,
+        type: Techs.Frontend,
       },
       {
         kind: Links.Express,
         url: "https://expressjs.com/",
-        type: TechType.Backend,
+        type: Techs.Backend,
       },
       {
         kind: Links.Redis,
         url: "https://redis.io/",
-        type: TechType.Infra,
+        type: Techs.Infra,
       },
     ],
   },
@@ -99,32 +100,32 @@ export const projects: Project[] = [
       {
         kind: Links.Node,
         url: "https://nodejs.org/en/",
-        type: TechType.Backend,
+        type: Techs.Backend,
       },
       {
         kind: Links.React,
         url: "https://reactjs.org/",
-        type: TechType.Frontend,
+        type: Techs.Frontend,
       },
       {
         kind: Links.Nextjs,
         url: "https://nextjs.org/",
-        type: TechType.Frontend,
+        type: Techs.Frontend,
       },
       {
         kind: Links.Python,
         url: "https://www.python.org/",
-        type: TechType.Backend,
+        type: Techs.Backend,
       },
       {
         kind: Links.Numpy,
         url: "https://numpy.org/",
-        type: TechType.MachineLearning,
+        type: Techs.MachineLearning,
       },
       {
         kind: Links.TensorFlow,
         url: "https://www.tensorflow.org/",
-        type: TechType.MachineLearning,
+        type: Techs.MachineLearning,
       },
     ],
   },

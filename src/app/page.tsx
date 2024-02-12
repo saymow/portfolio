@@ -1,6 +1,6 @@
 "use client";
 import Project from "./components/Project";
-import { Links } from "./models/links";
+import { Links } from "./models/link";
 import { Project as ProjectModel } from "./models/project";
 import styles from "./page.module.css";
 import { projects } from "./data/projects";

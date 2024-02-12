@@ -18,3 +18,8 @@ export enum Links {
   TensorFlow = "TensorFlow",
   Python = "Python",
 }
+
+export interface Link {
+  kind: Links;
+  url: string;
+}
