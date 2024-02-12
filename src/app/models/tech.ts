@@ -4,7 +4,7 @@ export enum Techs {
   Frontend = "Frontend",
   Backend = "Backend",
   Testing = "Testing",
-  Infra = "Infra",
+  Infra = "Infrastructure",
   MachineLearning = "Machine Learning",
   Utilities = "Utilities",
   Services = "Services",

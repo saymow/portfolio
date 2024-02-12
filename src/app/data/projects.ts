@@ -2,7 +2,7 @@ import { Project } from "../models/project";
 import { Links } from "../models/link";
 import { Techs } from "../models/tech";
 
-export const projects: Project[] = [
+export const Projects: Project[] = [
   {
     title: "Ecommerce",
     description:
@@ -80,6 +80,16 @@ export const projects: Project[] = [
         url: "https://redis.io/",
         type: Techs.Infra,
       },
+      {
+        kind: Links.Eslint,
+        url: "https://eslint.org/",
+        type: Techs.Utilities,
+      },
+      {
+        kind: Links.Prettier,
+        url: "https://prettier.io/",
+        type: Techs.Utilities,
+      },
     ],
   },
   {
@@ -127,6 +137,21 @@ export const projects: Project[] = [
         url: "https://www.tensorflow.org/",
         type: Techs.MachineLearning,
       },
+      {
+        kind: Links.Eslint,
+        url: "https://eslint.org/",
+        type: Techs.Utilities,
+      },
+      {
+        kind: Links.Prettier,
+        url: "https://prettier.io/",
+        type: Techs.Utilities,
+      },
+      {
+        kind: Links.Javascript,
+        url: "https://www.javascript.com/",
+        type: Techs.Backend,
+      }
     ],
   },
 ];

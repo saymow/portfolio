@@ -12,6 +12,9 @@
 
 .tech_cluster {
   text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-size: 0.8rem;
   padding: 0.2rem;
   font-weight: bold;
