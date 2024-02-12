@@ -68,37 +68,42 @@ interface ClusterRect extends Rect {
 const computeClustersRects = (
   list: ProjectTech[],
   rects: Rect[]
-): ClusterRect[] => {
+): ClusterRect[][] => {
   console.log(list.length, rects.length);
   if (list.length === 0) return [];
   if (list.length !== rects.length) return [];
 
-  const clustersRects: ClusterRect[] = [
-    {
-      type: list[0].type,
-      left: rects[0].left,
-      top: rects[0].top,
-      right: rects[0].right,
-      bottom: rects[0].bottom,
-    },
+  const clustersRects: ClusterRect[][] = [
+    [
+      {
+        type: list[0].type,
+        left: rects[0].left,
+        top: rects[0].top,
+        right: rects[0].right,
+        bottom: rects[0].bottom,
+      },
+    ],
   ];
 
   for (let idx = 1; idx < list.length; idx++) {
     const currentRect = rects[idx];
     const currentTech = list[idx];
-    const currentClusterRect = clustersRects[clustersRects.length - 1];
+    const currentCluster = clustersRects[clustersRects.length - 1];
+    const currentClusterRect = currentCluster[currentCluster.length - 1];
 
     if (currentTech.type !== currentClusterRect.type) {
-      clustersRects.push({
-        type: currentTech.type,
-        top: currentRect.top,
-        left: currentRect.left,
-        right: currentRect.right,
-        bottom: currentRect.bottom,
-      });
+      clustersRects.push([
+        {
+          type: currentTech.type,
+          top: currentRect.top,
+          left: currentRect.left,
+          right: currentRect.right,
+          bottom: currentRect.bottom,
+        },
+      ]);
     } else {
       if (currentRect.top !== currentClusterRect.top) {
-        clustersRects.push({
+        currentCluster.push({
           type: currentClusterRect.type,
           top: currentRect.top,
           left: currentRect.left,
@@ -114,26 +119,53 @@ const computeClustersRects = (
   return clustersRects;
 };
 
-const makeClusterElements = (rects: ClusterRect[]): React.ReactNode => {
+const makeClusterElements = (rects: ClusterRect[][]): React.ReactNode => {
   const padding = 10;
 
-  return rects.map((rect) => (
-    <span
-      key={rect.left + rect.top}
-      className={styles.tech_cluster}
-      style={{
-        position: "absolute",
-        left: rect.left - padding,
-        top: rect.top - 2 * padding,
-        width: rect.right - rect.left + 2 * padding,
-        height: rect.bottom - rect.top + 3 * padding,
-        background: TECH_TYPE_COLOR[rect.type],
-        zIndex: -1,
-      }}
-    >
-      <span>{rect.type}</span>
-    </span>
-  ));
+  return rects
+    .flatMap((clusterRects) => {
+      if (clusterRects.length === 1) {
+        return [{ ...clusterRects[0], className: styles.tech_cluster_full }];
+      }
+      if (clusterRects.length === 2) {
+        const [start, end] = clusterRects;
+        return [
+          { ...start, className: styles.tech_cluster_start },
+          { ...end, className: styles.tech_cluster_end },
+        ];
+      }
+
+      return [
+        { ...clusterRects[0], className: styles.tech_cluster_start },
+        ...clusterRects
+          .slice(1, clusterRects.length - 1)
+          .map((clusterRect) => ({
+            ...clusterRect,
+            className: styles.tech_cluster_middle,
+          })),
+        {
+          ...clusterRects[clusterRects.length - 1],
+          className: styles.tech_cluster_end,
+        },
+      ];
+    })
+    .map((data) => (
+      <span
+        key={data.left + data.top}
+        className={`${styles.tech_cluster} ${data.className}`}
+        style={{
+          position: "absolute",
+          left: data.left - padding,
+          top: data.top - 2 * padding,
+          width: data.right - data.left + 2 * padding,
+          height: data.bottom - data.top + 3 * padding,
+          background: TECH_TYPE_COLOR[data.type],
+          zIndex: -1,
+        }}
+      >
+        <span>{data.type}</span>
+      </span>
+    ));
 };
 
 const TechList: React.FC<Props> = (props) => {
@@ -143,7 +175,7 @@ const TechList: React.FC<Props> = (props) => {
     () => populateLinksIcon(clusterTechs(list)),
     [list]
   );
-  const [clusterRects, setCluserRects] = useState<ClusterRect[]>([]);
+  const [clusterRects, setCluserRects] = useState<ClusterRect[][]>([]);
 
   const computeRects = useCallback(() => {
     const rootEl = listRef.current!;
