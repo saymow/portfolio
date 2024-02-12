@@ -39,7 +39,7 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
           <LinksSection.Root title="More details:">
             <LinksSection.OrdinaryList list={project.details_links} />
           </LinksSection.Root>
-          <LinksSection.Root title="More details:">
+          <LinksSection.Root title="Tech stack:">
             <LinksSection.TechList list={project.tech_stack_links} />
           </LinksSection.Root>
         </motion.footer>

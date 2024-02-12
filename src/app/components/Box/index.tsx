@@ -15,9 +15,9 @@ const Box: React.FC<Props> = (props) => {
     <a href={url} target="_blank">
       <motion.article
         title={title}
-        initial={{ opacity: 0, background: "rgba(0, 0, 0, 0.2)" }}
+        initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        whileHover={{ scale: 1.05, background: "rgba(0, 0, 0, 0)" }}
+        whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className={styles.box}
       >
