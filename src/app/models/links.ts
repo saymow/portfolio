@@ -1,4 +1,5 @@
 export enum Links {
+  Live = "Live",
   Github = "Github",
   React = "React",
   Node = "Node",
@@ -11,6 +12,9 @@ export enum Links {
   Redux = "Redux",
   StyledComponents = "Styled-components",
   Bootstrap = "Bootstrap",
-  Express = 'Express',
-  Redis = 'Redis'
+  Express = "Express",
+  Redis = "Redis",
+  Numpy = "Numpy",
+  TensorFlow = "TensorFlow",
+  Python = "Python",
 }

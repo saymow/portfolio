@@ -13,9 +13,14 @@ import { Redis } from "@styled-icons/simple-icons/Redis";
 import { Styledcomponents } from "@styled-icons/simple-icons/Styledcomponents";
 import { Typescript } from "@styled-icons/simple-icons/Typescript";
 import { StyledIcon } from "@styled-icons/styled-icon";
+import { Browser } from "@styled-icons/entypo/Browser";
+import { Numpy } from "@styled-icons/simple-icons/Numpy";
+import { Tensorflow } from "@styled-icons/simple-icons/Tensorflow";
+import { Python } from "@styled-icons/fa-brands/Python";
 import { Links } from "../models/links";
 
 const LINK_ICON_MAP: Record<Links, StyledIcon> = {
+  [Links.Live]: Browser,
   [Links.Github]: Github,
   [Links.React]: ReactLogo,
   [Links.Node]: Nodejs,
@@ -30,6 +35,9 @@ const LINK_ICON_MAP: Record<Links, StyledIcon> = {
   [Links.Bootstrap]: Bootstrap,
   [Links.Express]: Express,
   [Links.Redis]: Redis,
+  [Links.Numpy]: Numpy,
+  [Links.TensorFlow]: Tensorflow,
+  [Links.Python]: Python,
 };
 
 export const makeLinkIcon = (link: Links): StyledIcon => {

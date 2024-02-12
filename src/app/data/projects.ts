@@ -67,5 +67,46 @@ export const projects: Project[] = [
         url: "https://redis.io/",
       },
     ],
-  }
+  },
+  {
+    title: "Movies Recommender",
+    description: "A machine learning recommendation application.",
+    img_url: "/movies-recommender.png",
+    details_links: [
+      {
+        kind: Links.Live,
+        url: "https://movies-recommender-tau.vercel.app/",
+      },
+      {
+        kind: Links.Github,
+        url: "https://github.com/saymow/movies-recommender",
+      },
+    ],
+    tech_stack_links: [
+      {
+        kind: Links.Node,
+        url: "https://nodejs.org/en/",
+      },
+      {
+        kind: Links.React,
+        url: "https://reactjs.org/",
+      },
+      {
+        kind: Links.Nextjs,
+        url: "https://nextjs.org/",
+      },
+      {
+        kind: Links.Python,
+        url: "https://www.python.org/",
+      },
+      {
+        kind: Links.Numpy,
+        url: "https://numpy.org/",
+      },
+      {
+        kind: Links.TensorFlow,
+        url: "https://www.tensorflow.org/",
+      },
+    ],
+  },
 ];

@@ -17,7 +17,7 @@
   padding: 1rem;
 
   /* From https://css.glass */
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   box-shadow: 4px -4px 15px 0px rgba(0, 0, 0, 1);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
