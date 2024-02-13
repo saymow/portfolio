@@ -1,8 +1,8 @@
 "use client";
 import { createPortal } from "react-dom";
-import { Close } from "@styled-icons/evil/Close";
 import styles from "./modal.module.css";
 import { useCallback, useEffect } from "react";
+import { CloseOutline } from "@styled-icons/evaicons-outline/CloseOutline";
 
 interface Props {
   isOpen?: boolean;
@@ -42,7 +42,7 @@ const Modal: React.FC<Props> = (props) => {
     <div className={styles.modal_container}>
       <div className={styles.modal_backdrop} onClick={onClose}></div>
       <main className={styles.modal_main}>
-        <Close
+        <CloseOutline
           onClick={onClose}
           className={styles.modal_close_btn}
           width="2rem"
