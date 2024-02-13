@@ -1,19 +1,28 @@
 "use client";
+import { useRef } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
 import Project from "./components/Project";
-import { Links } from "./models/link";
-import { Project as ProjectModel } from "./models/project";
-import styles from "./page.module.css";
-import { Projects } from "./data/projects";
 import TechStack from "./components/TechStack";
+import { Projects } from "./data/projects";
 import { Stack } from "./data/techs";
+import styles from "./page.module.css";
 
 export default function Home() {
+  const mainRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    offset: ["start start", "end end"],
+  });
+  const scaleX = useSpring(scrollYProgress);
+
   return (
-    <main className={styles.main}>
-      {Projects.map((project) => (
-        <Project key={project.title} project={project} />
-      ))}
-      <TechStack techs={Stack}/>
-    </main>
+    <>
+      <motion.div style={{ scaleX }} className={styles.progress_bar} />
+      <main ref={mainRef} className={styles.main}>
+        {Projects.map((project) => (
+          <Project key={project.title} project={project} />
+        ))}
+        <TechStack techs={Stack} />
+      </main>
+    </>
   );
 }

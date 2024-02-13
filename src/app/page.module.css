@@ -2,3 +2,14 @@
   display: flex;
   flex-direction: column;
 }
+
+.progress_bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  z-index: 98;
+  background: var(--text-primary);
+  transform-origin: 0%;
+}

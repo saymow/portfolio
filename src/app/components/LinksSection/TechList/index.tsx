@@ -66,7 +66,6 @@ interface ClusterRect extends Rect {
 }
 
 const computeClustersRects = (list: Tech[], rects: Rect[]): ClusterRect[][] => {
-  console.log(list.length, rects.length);
   if (list.length === 0) return [];
   if (list.length !== rects.length) return [];
 
