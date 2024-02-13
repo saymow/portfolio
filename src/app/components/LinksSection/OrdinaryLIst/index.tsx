@@ -1,11 +1,11 @@
 import { useMemo } from "react";
 import { populateLinksIcon } from "../utils";
-import { ProjectLink } from "@/app/models/project";
+import { Link } from "@/app/models/link";
 import Box from "../../Box";
 import styles from './ordinary-list.module.css'
 
 interface Props {
-  list: ProjectLink[];
+  list: Link[];
 }
 
 const OrdinaryList: React.FC<Props> = (props) => {
