@@ -4,6 +4,7 @@ import { Whatsapp } from "@styled-icons/boxicons-logos/Whatsapp";
 import { Email } from "@styled-icons/material-outlined/Email";
 import { Github } from "@styled-icons/boxicons-logos/Github";
 import { LinkedinSquare } from "@styled-icons/boxicons-logos/LinkedinSquare";
+import { FileEarmarkCheckFill } from "@styled-icons/bootstrap/FileEarmarkCheckFill";
 
 const Contacts = () => {
   return (
@@ -21,7 +22,7 @@ const Contacts = () => {
             whileInView={{ opacity: 1, transform: "translateY(0%)" }}
             whileHover={{ transform: "translateY(0%) scale(1.05)" }}
           >
-            <Whatsapp width="5rem" height="5rem" />
+            <Whatsapp width="4rem" height="4rem" />
             <h3>Whatsapp</h3>
           </motion.article>
         </a>
@@ -36,7 +37,7 @@ const Contacts = () => {
             whileInView={{ opacity: 1, transform: "translateY(0%)" }}
             whileHover={{ transform: "translateY(0%) scale(1.05)" }}
           >
-            <Email width="5rem" height="5rem" />
+            <Email width="4rem" height="4rem" />
             <h3>Email</h3>
           </motion.article>
         </a>
@@ -51,7 +52,7 @@ const Contacts = () => {
             whileInView={{ opacity: 1, transform: "translateY(0%)" }}
             whileHover={{ transform: "translateY(0%) scale(1.05)" }}
           >
-            <LinkedinSquare width="5rem" height="5rem" />
+            <LinkedinSquare width="4rem" height="4rem" />
             <h3>Linkedin</h3>
           </motion.article>
         </a>
@@ -63,8 +64,23 @@ const Contacts = () => {
             whileInView={{ opacity: 1, transform: "translateY(0%)" }}
             whileHover={{ transform: "translateY(0%) scale(1.05)" }}
           >
-            <Github width="5rem" height="5rem" />
+            <Github width="4rem" height="4rem" />
             <h3>Github</h3>
+          </motion.article>
+        </a>
+        <a
+          href="https://drive.google.com/file/d/12bgJYT12UpLSdpwQJ877QUQdt-tx7cc_/view?usp=sharing"
+          target="_blank"
+        >
+          <motion.article
+            title="Resume"
+            className={styles.card}
+            initial={{ opacity: 0, transform: "translateY(10%)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0%)" }}
+            whileHover={{ transform: "translateY(0%) scale(1.05)" }}
+          >
+            <FileEarmarkCheckFill width="4rem" height="4rem" />
+            <h3>Resume</h3>
           </motion.article>
         </a>
       </section>
