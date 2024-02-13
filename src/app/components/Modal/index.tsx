@@ -29,6 +29,11 @@ const Modal: React.FC<Props> = (props) => {
     };
   }, [handleKeypress]);
 
+  useEffect(() => {
+    if (isOpen) document.querySelector("body")!.style.overflow = "hidden";
+    else document.querySelector("body")!.style.overflow = "auto";
+  }, [isOpen]);
+
   if (!isOpen) {
     return null;
   }
