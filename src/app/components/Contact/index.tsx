@@ -8,7 +8,7 @@ import { FileEarmarkCheckFill } from "@styled-icons/bootstrap/FileEarmarkCheckFi
 
 const Contacts = () => {
   return (
-    <section className={styles.container}>
+    <section id="contacts" className={styles.container}>
       <h2>{"Let's work together"}</h2>
       <section className={styles.cards_container}>
         <a

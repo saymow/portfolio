@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.info_container {
+  position: absolute;
+  top: 50%;
+  width: max(50%, 20rem);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.personal_data {
+  font-size: 2rem;
+  min-height: 14rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.personal_data h2 {
+  background: var(--text-primary);
+  color: var(--bg-color);
+}

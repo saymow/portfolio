@@ -196,11 +196,6 @@ const TechList: React.FC<Props> = (props) => {
     );
     const relativeRects = computeRectRelativePosition(rootRect, childrenRects);
 
-    console.log(
-      rootRect,
-      computeClustersRects(clusteredTechs, relativeRects, rootRect)
-    );
-
     setCluserRects(
       computeClustersRects(clusteredTechs, relativeRects, rootRect)
     );
