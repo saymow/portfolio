@@ -22,27 +22,27 @@
 }
 
 .tech_cluster_full {
-  border: 1px solid var(--bg-secondary-color);
+  border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
   color: var(--primary-text);
 }
 
 .tech_cluster_start {
-  border-top: 1px solid var(--bg-secondary-color);
-  border-left: 1px solid var(--bg-secondary-color);
-  border-bottom: 1px solid var(--bg-secondary-color);
+  border-top: 1px solid var(--primary-color);
+  border-left: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
   border-radius: 0.5rem 0 0 0.5rem;
   color: var(--primary-text);
 }
 
 .tech_cluster_end {
-  border-top: 1px solid var(--bg-secondary-color);
-  border-right: 1px solid var(--bg-secondary-color);
-  border-bottom: 1px solid var(--bg-secondary-color);
+  border-top: 1px solid var(--primary-color);
+  border-right: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
 .tech_cluster_middle {
-  border-top: 1px solid var(--bg-secondary-color);
-  border-bottom: 1px solid var(--bg-secondary-color);
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
 }

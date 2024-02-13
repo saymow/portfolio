@@ -28,7 +28,7 @@
   /* padding: 1rem; */
   margin: 1rem;
 
-  background: #000;
+  background: var(--secondary-color);
   max-width: calc(100% - 2rem);
   width: auto;
   height: auto;
@@ -44,7 +44,7 @@
   top: 0.5rem;
   right: 0.5rem;
   cursor: pointer;
-  color: #000;
+  color: var(--secondary-color);
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 0.5rem;
 }
