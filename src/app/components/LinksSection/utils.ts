@@ -1,8 +1,9 @@
 import { makeLinkIcon } from "@/app/helpers/get-link-icon";
-import { ProjectLink, ProjectTech } from "@/app/models/project";
 import { Props as BoxLink } from "../Box";
+import { Tech } from "@/app/models/tech";
+import { Link } from "@/app/models/link";
 
-export function populateLinksIcon<T extends ProjectLink | ProjectTech>(
+export function populateLinksIcon<T extends Link | Tech>(
   techs: T[]
 ): (T & BoxLink)[] {
   return techs.map((tech) => ({
