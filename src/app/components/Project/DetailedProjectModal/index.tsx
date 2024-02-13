@@ -1,5 +1,5 @@
 import { makeLinkIcon } from "@/app/helpers/get-link-icon";
-import { Project, ProjectLink } from "@/app/models/project";
+import { Project } from "@/app/models/project";
 import Image from "next/image";
 import { useMemo } from "react";
 import { Props as BoxLink } from "../../Box";
@@ -27,7 +27,7 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
           width="0"
           height="0"
           sizes="100vw"
-          style={{ width: "80vw", height: "auto" }}
+          style={{ width: "85vw", height: "auto" }}
         />
         <motion.footer
           className={styles.details_container}

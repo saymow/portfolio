@@ -8,8 +8,8 @@
 .image_section {
   position: relative;
   cursor: zoom-in;
-  width: 100%;
   transition: 500ms;
+  width: 100%;
   mask: linear-gradient(135deg, #000e 40%, #000, #000e 60%) 100% 100%/ 240% 240%;
 }
 

@@ -39,7 +39,7 @@ const Project: React.FC<Props> = (props) => {
             opacity: 1,
           }}
           whileHover={{
-            transform: "perspective(400px) rotate3d(0, 1, 0, 0deg) scale(1.05)",
+            transform: "perspective(400px) rotate3d(0, 1, 0, 0deg)",
           }}
         >
           <Expand className={styles.expand_icon} width="60%" height="60%" />
