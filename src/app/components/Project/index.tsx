@@ -29,18 +29,8 @@ const Project: React.FC<Props> = (props) => {
           title={project.title}
           className={styles.image_section}
           onClick={handleOpenDetails}
-          initial={{
-            transform: "translateX(-10%)",
-            opacity: 0,
-          }}
-          whileInView={{
-            transform:
-              "translateX(0) perspective(150px) rotate3d(0, 1, 0, 1deg)",
-            opacity: 1,
-          }}
-          whileHover={{
-            transform: "perspective(400px) rotate3d(0, 1, 0, 0deg)",
-          }}
+          initial={{ transform: "translateY(10%)", opacity: 0 }}
+          whileInView={{ transform: "translateY(0)", opacity: 1 }}
         >
           <Expand className={styles.expand_icon} width="60%" height="60%" />
           <Image

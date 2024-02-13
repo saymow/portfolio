@@ -17,9 +17,9 @@ const Contacts = () => {
           <motion.article
             title="Whatsapp"
             className={styles.card}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, transform: "translateY(10%)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0%)" }}
+            whileHover={{ transform: "translateY(0%) scale(1.05)" }}
           >
             <Whatsapp width="5rem" height="5rem" />
             <h3>Whatsapp</h3>
@@ -32,9 +32,9 @@ const Contacts = () => {
           <motion.article
             title="Email"
             className={styles.card}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, transform: "translateY(10%)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0%)" }}
+            whileHover={{ transform: "translateY(0%) scale(1.05)" }}
           >
             <Email width="5rem" height="5rem" />
             <h3>Email</h3>
@@ -47,9 +47,9 @@ const Contacts = () => {
           <motion.article
             title="Linkedin"
             className={styles.card}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, transform: "translateY(10%)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0%)" }}
+            whileHover={{ transform: "translateY(0%) scale(1.05)" }}
           >
             <LinkedinSquare width="5rem" height="5rem" />
             <h3>Linkedin</h3>
@@ -59,9 +59,9 @@ const Contacts = () => {
           <motion.article
             title="Github"
             className={styles.card}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, transform: "translateY(10%)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0%)" }}
+            whileHover={{ transform: "translateY(0%) scale(1.05)" }}
           >
             <Github width="5rem" height="5rem" />
             <h3>Github</h3>

@@ -65,7 +65,11 @@ interface ClusterRect extends Rect {
   type: Techs;
 }
 
-const computeClustersRects = (list: Tech[], rects: Rect[]): ClusterRect[][] => {
+const computeClustersRects = (
+  list: Tech[],
+  rects: Rect[],
+  rootRect: Rect
+): ClusterRect[][] => {
   if (list.length === 0) return [];
   if (list.length !== rects.length) return [];
 
@@ -88,6 +92,9 @@ const computeClustersRects = (list: Tech[], rects: Rect[]): ClusterRect[][] => {
     const currentClusterRect = currentCluster[currentCluster.length - 1];
 
     if (currentTech.type !== currentClusterRect.type) {
+      if (currentRect.top !== currentClusterRect.top) {
+        currentClusterRect.right = rootRect.right - rootRect.left;
+      }
       clustersRects.push([
         {
           type: currentTech.type,
@@ -99,6 +106,7 @@ const computeClustersRects = (list: Tech[], rects: Rect[]): ClusterRect[][] => {
       ]);
     } else {
       if (currentRect.top !== currentClusterRect.top) {
+        currentClusterRect.right = rootRect.right - rootRect.left;
         currentCluster.push({
           type: currentClusterRect.type,
           top: currentRect.top,
@@ -145,23 +153,30 @@ const makeClusterElements = (rects: ClusterRect[][]): React.ReactNode => {
         },
       ];
     })
-    .map((data) => (
-      <span
-        key={data.left + data.top}
-        className={`${styles.tech_cluster} ${data.className}`}
-        style={{
-          position: "absolute",
-          left: data.left - padding,
-          top: data.top - 2 * padding,
-          width: data.right - data.left + 2 * padding,
-          height: data.bottom - data.top + 3 * padding,
-          background: TECH_TYPE_COLOR[data.type],
-          zIndex: -1,
-        }}
-      >
-        <span>{data.type}</span>
-      </span>
-    ));
+    .map((data) => {
+      const width =
+        data.className === styles.tech_cluster_start
+          ? data.right - data.left + padding
+          : data.right - data.left + 2 * padding;
+
+      return (
+        <span
+          key={data.left + data.top}
+          className={`${styles.tech_cluster} ${data.className}`}
+          style={{
+            position: "absolute",
+            left: data.left - padding,
+            top: data.top - 2 * padding,
+            width,
+            height: data.bottom - data.top + 3 * padding,
+            background: TECH_TYPE_COLOR[data.type],
+            zIndex: -1,
+          }}
+        >
+          <span>{data.type}</span>
+        </span>
+      );
+    });
 };
 
 const TechList: React.FC<Props> = (props) => {
@@ -181,7 +196,14 @@ const TechList: React.FC<Props> = (props) => {
     );
     const relativeRects = computeRectRelativePosition(rootRect, childrenRects);
 
-    setCluserRects(computeClustersRects(clusteredTechs, relativeRects));
+    console.log(
+      rootRect,
+      computeClustersRects(clusteredTechs, relativeRects, rootRect)
+    );
+
+    setCluserRects(
+      computeClustersRects(clusteredTechs, relativeRects, rootRect)
+    );
   }, [clusteredTechs]);
 
   useEffect(() => {

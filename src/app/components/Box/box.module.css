@@ -22,5 +22,5 @@
 .box span {
   font-size: 0.8rem;
   text-align: center;
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }

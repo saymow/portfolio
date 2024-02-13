@@ -13,7 +13,10 @@ const TechStack: React.FC<Props> = (props) => {
   return (
     <section className={styles.container}>
       <h2>Tech Stack</h2>
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+      <motion.div
+        initial={{ opacity: 0, transform: "translateY(10%)" }}
+        whileInView={{ opacity: 1, transform: "translateY(0%)" }}
+      >
         <LinksSection.TechList list={techs} />
       </motion.div>
     </section>
