@@ -6,6 +6,7 @@ import TechStack from "./components/TechStack";
 import { Projects } from "./data/projects";
 import { Stack } from "./data/techs";
 import styles from "./page.module.css";
+import Contacts from "./components/Contact";
 
 export default function Home() {
   const mainRef = useRef<HTMLElement>(null);
@@ -22,6 +23,7 @@ export default function Home() {
           <Project key={project.title} project={project} />
         ))}
         <TechStack techs={Stack} />
+        <Contacts />
       </main>
     </>
   );
