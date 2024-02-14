@@ -10,7 +10,7 @@
   position: relative;
   cursor: zoom-in;
   transition: 500ms;
-  width: 100%;
+  width: 80%;
   mask: linear-gradient(135deg, #000e 40%, #000, #000e 60%) 100% 100%/ 240% 240%;
 }
 

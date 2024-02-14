@@ -1,0 +1,25 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  -webkit-box-shadow: inset 10px 10px 300px 160px var(--bg-color);
+  -moz-box-shadow: inset 10px 10px 300px 160px var(--bg-color);
+  box-shadow: inset 10px 10px 300px 160px var(--bg-color);
+}
+
+.container span {
+  border: 1px solid rgb(200, 200, 200, 0.02);
+  z-index: -1;
+}

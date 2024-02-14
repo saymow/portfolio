@@ -4,11 +4,11 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --bg-color: hsl(240 10% 3.9%);
+  --bg-color: rgb(9, 9, 11);
   --primary-color: #161616;
   --secondary-color: #000;
   --text-primary: #fafafa;
-  --text-secondary: #c8c8c8;
+  --text-secondary: rgb(200, 200, 200);
 }
 
 *,

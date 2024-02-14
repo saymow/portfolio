@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./presentation.module.css";
 import { motion } from "framer-motion";
 import CtaButton from "../CtaButton";
+import Backdrop from "./Backdrop";
 
 const phrases = [
   "to solve complex problems with code.",
@@ -32,6 +33,7 @@ const Presentation: React.FC = () => {
 
   return (
     <section className={styles.container}>
+      <Backdrop />
       <motion.article
         initial={{ opacity: 0, transform: "translateY(-40%)" }}
         whileInView={{ opacity: 1, transform: "translateY(-50%)" }}
