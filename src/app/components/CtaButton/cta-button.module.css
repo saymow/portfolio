@@ -1,8 +1,50 @@
 .cta_button {
+  position: relative;
   cursor: pointer;
   background: var(--bg-color);
-  border: 1px solid var(--text-secondary);
   border-radius: 0.5rem;
   padding: 0.5rem;
   font-size: 1.2rem;
+  overflow: hidden;
+  width: 10rem;
+  height: 3rem;
+}
+
+.cta_button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+
+  background-image: conic-gradient(
+    var(--text-primary) 0deg,
+    transparent 270deg
+  );
+  animation: rotate 2000ms infinite linear reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+  }
+}
+
+.cta_button::after {
+  position: absolute;
+  content: attr(data-text);
+  inset: 1px;
+  height: calc(100% - 2 * 1px);
+  width: calc(100% - 2 * 1px);
+  background: inherit;
+  border-radius: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -3,10 +3,10 @@ import styles from "./cta-button.module.css";
 import { motion } from "framer-motion";
 
 interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-  children: React.ReactNode;
+  text: string;
 }
 
-const CtaButton: React.FC<Props> = ({ children, ...rest }) => {
+const CtaButton: React.FC<Props> = ({ text, ...rest }) => {
   return (
     <motion.a
       initial={{ opacity: 0 }}
@@ -15,9 +15,8 @@ const CtaButton: React.FC<Props> = ({ children, ...rest }) => {
       whileTap={{ scale: 0.95 }}
       className={styles.cta_button}
       {...(rest as any)}
-    >
-      {children}
-    </motion.a>
+      data-text={text}
+    ></motion.a>
   );
 };
 

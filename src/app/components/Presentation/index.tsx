@@ -45,9 +45,7 @@ const Presentation: React.FC = () => {
             {refs.x % 2 === 0 ? "_" : ""}
           </h4>
         </div>
-        <CtaButton href="#contacts">
-          Contact me!
-        </CtaButton>
+        <CtaButton text={"Contact me!"} href="#contacts" />
       </motion.article>
     </section>
   );
