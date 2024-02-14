@@ -12,9 +12,11 @@ const Projects: React.FC<Props> = (props) => {
   return (
     <section id="projects" className={styles.container}>
       <h2>Featured Projects</h2>
-      {projects.map((project) => (
-        <Project key={project.title} project={project} />
-      ))}
+      <article>
+        {projects.map((project) => (
+          <Project key={project.title} project={project} />
+        ))}
+      </article>
     </section>
   );
 };

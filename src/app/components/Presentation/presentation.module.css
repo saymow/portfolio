@@ -7,7 +7,8 @@
 .info_container {
   position: absolute;
   top: 50%;
-  width: max(50%, 20rem);
+  width: 36rem;
+  max-width: 100%;
   overflow: hidden;
 
   display: flex;

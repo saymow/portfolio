@@ -149,10 +149,10 @@ export const makeClusterElements = (
       ];
     })
     .map((data) => {
-      const width =
-        data.className === styles.tech_cluster_start
-          ? data.right - data.left + padding
-          : data.right - data.left + 2 * padding;
+      const left = data.left - padding;
+      const top = data.top - 2 * padding;
+      const height = data.bottom - data.top + 3 * padding;
+      const width = data.right - data.left + 2 * padding;
 
       return (
         <span
@@ -160,10 +160,10 @@ export const makeClusterElements = (
           className={`${styles.tech_cluster} ${data.className}`}
           style={{
             position: "absolute",
-            left: data.left - padding,
-            top: data.top - 2 * padding,
+            left,
+            top,
             width,
-            height: data.bottom - data.top + 3 * padding,
+            height,
             background: TECH_TYPE_COLOR[data.type],
             zIndex: -1,
           }}

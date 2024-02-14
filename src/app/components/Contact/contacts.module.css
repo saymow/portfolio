@@ -1,13 +1,14 @@
 .container {
   display: flex;
   flex-direction: column;
+  margin-top: 10rem;
   margin-bottom: 5rem;
 }
 
 .container h2 {
   align-self: flex-start;
   text-transform: uppercase;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   font-size: 3rem;
 }
 
@@ -15,6 +16,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 1rem;
+}
+
+@media (width < 520px) {
+  .cards_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
 .card {

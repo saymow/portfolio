@@ -26,6 +26,22 @@ const TechList: React.FC<Props> = (props) => {
     }
   }, [clusteredTechs]);
 
+  useEffect(() => {
+    if (!listRef.current) return;
+
+    const observer = new ResizeObserver(() => {
+      setClusterElements(
+        computeClusterElements(listRef.current!, clusteredTechs)
+      );
+    });
+
+    observer.observe(listRef.current!);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [clusteredTechs]);
+
   return (
     <section className={styles.container}>
       <section ref={listRef}>

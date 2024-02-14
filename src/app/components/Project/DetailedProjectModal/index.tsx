@@ -1,12 +1,9 @@
-import { makeLinkIcon } from "@/app/helpers/get-link-icon";
 import { Project } from "@/app/models/project";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { useMemo } from "react";
-import { Props as BoxLink } from "../../Box";
+import { LinksSection } from "../../LinksSection";
 import Modal from "../../Modal";
 import styles from "./detailed-project-modal.module.css";
-import { motion } from "framer-motion";
-import { LinksSection } from "../../LinksSection";
 
 interface Props {
   project: Project;

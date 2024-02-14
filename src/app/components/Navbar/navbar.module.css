@@ -13,6 +13,14 @@
   box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
+@media (width < 480px) {
+  .container {
+    right: 50%;
+    transform: translateX(50%) !important;
+    width: 26rem;
+  }
+}
+
 .items_list {
   list-style: none;
   display: grid;

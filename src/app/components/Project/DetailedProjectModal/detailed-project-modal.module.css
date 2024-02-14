@@ -17,15 +17,28 @@
   padding: 1rem;
 
   /* From https://css.glass */
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.9);
   box-shadow: 4px -4px 15px 0px rgba(0, 0, 0, 1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
   border: 1px solid var(--secondary-color);
 
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+@media (width < 1000px) {
+  .backdrop_image {
+    display: none;
+  }
+
+  .container {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .details_container {
+    height: 100% !important;
+  }
 }
 
 .details_container::-webkit-scrollbar-track {

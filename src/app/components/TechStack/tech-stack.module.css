@@ -1,15 +1,15 @@
 .container {
-  height: 100vh;
   width: 100%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10rem;
 }
 
 .container h2 {
   align-self: flex-start;
   text-transform: uppercase;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   font-size: 3rem;
 }
