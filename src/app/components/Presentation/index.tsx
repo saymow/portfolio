@@ -3,6 +3,7 @@ import styles from "./presentation.module.css";
 import { motion } from "framer-motion";
 import CtaButton from "../CtaButton";
 import Backdrop from "./Backdrop";
+import { ChevronDoubleDown } from "@styled-icons/heroicons-outline/ChevronDoubleDown";
 
 const phrases = [
   "to solve complex problems with code.",
@@ -47,8 +48,19 @@ const Presentation: React.FC = () => {
             {refs.x % 2 === 0 ? "_" : ""}
           </h4>
         </div>
-        <CtaButton text={"Contact me!"} href="#contacts" />
+        <CtaButton text={"Contact me"} href="#contacts" />
       </motion.article>
+      <motion.a
+        href="#projects"
+        className={styles.scroll_button}
+        initial={{ opacity: 0, transform: "translateY(-10%)" }}
+        whileInView={{ opacity: 1, transform: "translateY(-0%)" }}
+        whileHover={{ opacity: 0.6 }}
+        whileTap={{ opacity: 0.2 }}
+      >
+        <ChevronDoubleDown height="3rem" width="3rem" />
+        <span>Scroll</span>
+      </motion.a>
     </section>
   );
 };

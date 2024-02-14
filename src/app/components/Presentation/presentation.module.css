@@ -30,3 +30,28 @@
   background: var(--text-primary);
   color: var(--bg-color);
 }
+
+.scroll_button {
+  cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .8rem;
+  animation: sink 1500ms infinite ease;
+}
+
+@keyframes sink {
+  0% {
+    transform: translateY(-10%);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}
