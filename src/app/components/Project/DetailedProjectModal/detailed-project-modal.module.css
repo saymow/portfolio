@@ -119,6 +119,8 @@
   .details_container {
     transform: translateY(0%);
     height: 100% !important;
+    overflow-y: scroll !important;
+    padding-top: 1rem;
   }
 
   .details_scroll_handle {
