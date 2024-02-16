@@ -122,6 +122,7 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
         )}
         <Video
           src={mainVideoUrl}
+          poster={project.img_url}
           className={styles.backdrop_video}
           loop
           autoPlay

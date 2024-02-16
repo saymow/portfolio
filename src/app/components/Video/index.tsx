@@ -7,10 +7,11 @@ interface Props {
   autoPlay?: boolean;
   controls?: boolean;
   preload?: string;
+  poster?: string;
 }
 
 const Video: React.FC<Props> = (props) => {
-  const { src, height, width, loop, autoPlay, controls, preload, className } =
+  const { src, height, width, loop, autoPlay, controls, preload, poster, className } =
     props;
 
   return (
@@ -24,6 +25,7 @@ const Video: React.FC<Props> = (props) => {
       autoPlay={autoPlay}
       controls={controls}
       preload={preload}
+      poster={poster}
     >
       <source src={src} type="video/mp4" />
       Your browser does not support the video tag.
