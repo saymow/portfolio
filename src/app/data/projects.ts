@@ -8,6 +8,7 @@ export const Projects: Project[] = [
     description:
       "An E-commerce with payment integration, admin panel and automated tests.",
     img_url: "/ecommerce.png",
+    videos_url: ["/ecommerce.mp4", "/ecommerce-admin.mp4"],
     details_links: [
       {
         kind: Links.Github,
@@ -96,6 +97,7 @@ export const Projects: Project[] = [
     title: "Movies Recommender",
     description: "A machine learning recommendation application.",
     img_url: "/movies-recommender.png",
+    videos_url: ["/movies-recommender.webm"],
     details_links: [
       {
         kind: Links.Live,

@@ -5,6 +5,7 @@ export interface Project {
   title: string;
   description: string;
   img_url: string;
+  videos_url: string[];
   details_links: Link[];
   tech_stack_links: Tech[];
 }
