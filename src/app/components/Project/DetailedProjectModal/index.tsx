@@ -1,17 +1,11 @@
 import { Project } from "@/app/models/project";
+import { ChevronDoubleUp } from "@styled-icons/heroicons-outline/ChevronDoubleUp";
 import { motion } from "framer-motion";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { LinksSection } from "../../LinksSection";
 import Modal from "../../Modal";
-import styles from "./detailed-project-modal.module.css";
 import Video from "../../Video";
-import {
-  DragEventHandler,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
-import { ChevronDoubleUp } from "@styled-icons/heroicons-outline/ChevronDoubleUp";
+import styles from "./detailed-project-modal.module.css";
 
 interface Props {
   project: Project;
@@ -29,26 +23,18 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
     if (isOpen) setHasDragged(false);
   }, [isOpen]);
 
-  const handleScrollHandleDrag: DragEventHandler<HTMLSpanElement> = useCallback(
-    (e) => {
-      e.stopPropagation();
-      e.preventDefault();
-      if (e.screenY === 0) return;
-      const cursorY = e.clientY;
-      const containerY = containerRef.current!.getBoundingClientRect().top;
-      const diff = cursorY - containerY;
+  const handleScrollHandleDrag = useCallback((e: MouseEvent) => {
+    const cursorY = e.clientY;
+    const containerY = containerRef.current!.getBoundingClientRect().top;
+    const diff = cursorY - containerY;
 
-      detailsSectionRef.current!.style.overflowY = "hidden";
-      detailsSectionRef.current!.style.height = `min(calc(100% - ${diff}px), 100%)`;
-      setHasDragged(true);
-    },
-    []
-  );
+    detailsSectionRef.current!.style.overflowY = "hidden";
+    detailsSectionRef.current!.style.height = `min(calc(100% - ${diff}px), 100%)`;
+    setHasDragged(true);
+  }, []);
 
-  const handleScrollHandleDragEnd: DragEventHandler<HTMLSpanElement> =
-    useCallback((e) => {
-      e.stopPropagation();
-      e.preventDefault();
+  const handleScrollHandleDragEnd = useCallback(
+    (e: MouseEvent) => {
       const { height: drawerHeight } =
         containerRef.current!.getBoundingClientRect();
       const { height: contaienerHeight } =
@@ -62,7 +48,17 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
         detailsSectionRef.current!.style.height = "0%";
         detailsSectionRef.current!.style.overflowY = "hidden";
       }
-    }, []);
+
+      window.removeEventListener("mousemove", handleScrollHandleDrag);
+      window.removeEventListener("mouseup", handleScrollHandleDragEnd);
+    },
+    [handleScrollHandleDrag]
+  );
+
+  const handleHandleMouseDown = () => {
+    window.addEventListener("mousemove", handleScrollHandleDrag);
+    window.addEventListener("mouseup", handleScrollHandleDragEnd);
+  };
 
   const mainVideoUrl = project.videos_url[0]!;
 
@@ -80,8 +76,7 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
           className={styles.details_container}
         >
           <span
-            onDrag={handleScrollHandleDrag}
-            onDragEnd={handleScrollHandleDragEnd}
+            onMouseDown={handleHandleMouseDown}
             className={styles.details_scroll_handle}
           ></span>
           <article>
