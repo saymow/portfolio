@@ -43,10 +43,8 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
 
       if (fraction > 0.5) {
         detailsSectionRef.current!.style.height = "100%";
-        detailsSectionRef.current!.style.overflowY = "auto";
       } else {
         detailsSectionRef.current!.style.height = "0%";
-        detailsSectionRef.current!.style.overflowY = "hidden";
       }
 
       window.removeEventListener("mousemove", handleScrollHandleDrag);
@@ -85,18 +83,34 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
           width="85vw"
           height="auto"
         />
+        {!hasDragged && (
+          <motion.span
+            initial={{ opacity: 0, transform: "translate(50%, 10px)" }}
+            animate={{ opacity: 0.8, transform: "translateY(50%, 0)" }}
+            className={styles.drag_hint}
+          >
+            <ChevronDoubleUp
+              color="var(--bg-color)"
+              height="3rem"
+              width="3rem"
+            />
+            <span>Drag</span>
+          </motion.span>
+        )}
         <motion.footer
           initial={{ opacity: 0, transform: "translateY(10px)" }}
           animate={{ opacity: 1, transform: "translateY(0)" }}
           ref={detailsSectionRef}
           className={styles.details_container}
         >
-          <span
-            onMouseDown={handleHandleMouseDown}
-            className={styles.details_scroll_handle}
-          ></span>
-          <article>
+          <header>
+            <span
+              onMouseDown={handleHandleMouseDown}
+              className={styles.details_scroll_handle}
+            ></span>
             <h1>{project.title}</h1>
+          </header>
+          <article>
             <p>{project.description}</p>
             {project.videos.length === 1 ? (
               <Video
@@ -133,20 +147,6 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
             </LinksSection.Root>
           </article>
         </motion.footer>
-        {!hasDragged && (
-          <motion.span
-            initial={{ opacity: 0, transform: "translate(50%, 10px)" }}
-            animate={{ opacity: 0.8, transform: "translateY(50%, 0)" }}
-            className={styles.drag_hint}
-          >
-            <ChevronDoubleUp
-              color="var(--bg-color)"
-              height="3rem"
-              width="3rem"
-            />
-            <span>Drag</span>
-          </motion.span>
-        )}
       </div>
     </Modal>
   );
