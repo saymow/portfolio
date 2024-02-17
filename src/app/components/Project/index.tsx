@@ -36,6 +36,11 @@ const Project: React.FC<Props> = (props) => {
             transform: "translateY(-1rem) translateX(-1rem)",
           }}
         >
+          <h1
+            className={styles.title}
+          >
+            {project.title}
+          </h1>
           <Image
             src={project.img_url}
             alt={project.title}

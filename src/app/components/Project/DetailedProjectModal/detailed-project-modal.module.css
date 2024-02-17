@@ -5,7 +5,14 @@
   background: var(--bg-color);
 }
 
-.backdrop_video {
+.title {
+  position: absolute;
+  font-size: 2rem;
+  padding: 1rem 1rem 1rem 0;
+  top: 0;
+  left: 0;
+  background: var(--secondary-color);
+  color: var(--text-primay);
 }
 
 .details_container {

@@ -6,10 +6,19 @@
 }
 
 .image_section {
+  position: relative;
   cursor: zoom-in;
   transition: 500ms;
   width: 100%;
-  transition: all 200ms ease;
   background: var(--secondary-color);
 }
 
+.title {
+  position: absolute;
+  font-size: 2rem;
+  padding: 1rem 1rem 1rem 0;
+  top: 0;
+  left: 0;
+  background: var(--bg-color);
+  color: var(--text-primay);
+}

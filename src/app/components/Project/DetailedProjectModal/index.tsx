@@ -69,9 +69,25 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
         className={styles.container}
         data-img={project.img_url}
       >
+        <motion.h1
+          className={styles.title}
+          initial={{ opacity: 0, transform: "translateX(-10px)" }}
+          animate={{ opacity: 1, transform: "translateX(0)" }}
+        >
+          {project.title}
+        </motion.h1>
+        <Video
+          src={mainVideoUrl}
+          poster={project.img_url}
+          className={styles.backdrop_video}
+          loop
+          autoPlay
+          width="85vw"
+          height="auto"
+        />
         <motion.footer
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, transform: "translateY(10px)" }}
+          animate={{ opacity: 1, transform: "translateY(0)" }}
           ref={detailsSectionRef}
           className={styles.details_container}
         >
@@ -103,8 +119,8 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
         </motion.footer>
         {!hasDragged && (
           <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }}
+            initial={{ opacity: 0, transform: "translate(50%, 10px)" }}
+            animate={{ opacity: 0.8, transform: "translateY(50%, 0)" }}
             className={styles.drag_hint}
           >
             <ChevronDoubleUp
@@ -115,15 +131,6 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
             <span>Drag</span>
           </motion.span>
         )}
-        <Video
-          src={mainVideoUrl}
-          poster={project.img_url}
-          className={styles.backdrop_video}
-          loop
-          autoPlay
-          width="85vw"
-          height="auto"
-        />
       </div>
     </Modal>
   );
