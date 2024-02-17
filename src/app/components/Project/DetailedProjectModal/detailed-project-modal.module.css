@@ -45,6 +45,17 @@
   align-self: center;
 }
 
+.details_container .video_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details_container .video_section h2 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
 .details_container::-webkit-scrollbar-thumb {
   background: var(--bg-color);
 }

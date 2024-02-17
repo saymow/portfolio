@@ -60,7 +60,7 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
     window.addEventListener("mouseup", handleScrollHandleDragEnd);
   };
 
-  const mainVideoUrl = project.videos_url[0]!;
+  const mainVideoUrl = project.videos[0]!.url;
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -98,17 +98,33 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
           <article>
             <h1>{project.title}</h1>
             <p>{project.description}</p>
-            {project.videos_url.map((video_url) => (
+            {project.videos.length === 1 ? (
               <Video
-                key={video_url}
-                src={video_url}
+                key={project.videos[0].url}
+                src={project.videos[0].url}
+                poster={project.videos[0].poster_url}
                 className={styles.content_video}
                 preload="metadata"
                 controls
                 width="80%"
                 height="auto"
               />
-            ))}
+            ) : (
+              project.videos.map((video) => (
+                <article className={styles.video_section} key={video.url}>
+                  <h2>{video.title}</h2>
+                  <Video
+                    src={video.url}
+                    poster={video.poster_url}
+                    className={styles.content_video}
+                    preload="metadata"
+                    controls
+                    width="80%"
+                    height="auto"
+                  />
+                </article>
+              ))
+            )}
             <LinksSection.Root title="More details:">
               <LinksSection.OrdinaryList list={project.details_links} />
             </LinksSection.Root>
