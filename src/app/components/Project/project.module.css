@@ -6,29 +6,10 @@
 }
 
 .image_section {
-  position: relative;
   cursor: zoom-in;
   transition: 500ms;
-  width: min(80%, 60rem);
-  mask: linear-gradient(135deg, #000e 40%, #000, #000e 60%) 100% 100%/ 240% 240%;
+  width: 100%;
+  transition: all 200ms ease;
+  background: var(--secondary-color);
 }
 
-.image_section:hover {
-  mask-position: 0 0;
-}
-
-.expand_icon {
-  opacity: 0;
-}
-
-.image_section:hover .expand_icon {
-  opacity: 1;
-}
-
-.expand_icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgba(0, 0, 0, 0.05);
-}

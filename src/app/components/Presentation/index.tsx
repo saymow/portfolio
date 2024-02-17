@@ -42,7 +42,19 @@ const Presentation: React.FC = () => {
       >
         <div className={styles.personal_data}>
           <h1>Gustavo Alves</h1>
-          <h2>Software Engineer</h2>
+          <motion.h2
+            initial={{
+              color: "var(--text-primary)",
+              boxShadow: "inset 0px 0 0 0 var(--text-primary)",
+            }}
+            whileInView={{
+              color: "var(--bg-color)",
+              boxShadow: "inset 100rem 0 0 0 var(--text-primary)",
+            }}
+            transition={{ delay: 0.2, duration: 1.6 }}
+          >
+            Software Engineer
+          </motion.h2>
           <h4>
             I like {phrases[refs.y].slice(0, refs.x)}
             {refs.x % 2 === 0 ? "_" : ""}

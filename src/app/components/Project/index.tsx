@@ -31,8 +31,11 @@ const Project: React.FC<Props> = (props) => {
           onClick={handleOpenDetails}
           initial={{ transform: "translateY(10%)", opacity: 0 }}
           whileInView={{ transform: "translateY(0)", opacity: 1 }}
+          whileHover={{
+            boxShadow: "1rem 1rem 0px 0px var(--secondary-color)",
+            transform: "translateY(-1rem) translateX(-1rem)",
+          }}
         >
-          <Expand className={styles.expand_icon} width="60%" height="60%" />
           <Image
             src={project.img_url}
             alt={project.title}
