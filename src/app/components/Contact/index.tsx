@@ -80,7 +80,7 @@ const Contacts = () => {
             whileHover={{ transform: "translateY(0%) scale(1.05)" }}
           >
             <FileEarmarkCheckFill width="4rem" height="4rem" />
-            <h3>Resume</h3>
+            <h3>CV</h3>
           </motion.article>
         </a>
       </section>
