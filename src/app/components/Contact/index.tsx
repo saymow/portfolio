@@ -69,11 +69,11 @@ const Contacts = () => {
           </motion.article>
         </a>
         <a
-          href="https://drive.google.com/file/d/12bgJYT12UpLSdpwQJ877QUQdt-tx7cc_/view?usp=sharing"
+          href="https://docs.google.com/document/d/1hrInToGlvEOZcEEIePVmVA7k4JMjW8gWD2H5-lIdxEc/edit?usp=sharing"
           target="_blank"
         >
           <motion.article
-            title="Resume"
+            title="CV"
             className={styles.card}
             initial={{ opacity: 0, transform: "translateY(10%)" }}
             whileInView={{ opacity: 1, transform: "translateY(0%)" }}
