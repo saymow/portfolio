@@ -40,9 +40,7 @@ const computeRef = (ref: Ref) => {
 
 const Presentation: React.FC = () => {
   const [refs, setReferences] = useState<Ref>({ y: 0, x: 0 });
-  const [scrollTo, setScrollTo] = useState<ScrollTo>(
-    window.scrollY === 0 ? ScrollTo.Bottom : ScrollTo.Top
-  );
+  const [scrollTo, setScrollTo] = useState<ScrollTo>(ScrollTo.Bottom);
 
   const handleScrollEvent = useCallback((_: Event) => {
     setScrollTo(window.scrollY === 0 ? ScrollTo.Bottom : ScrollTo.Top);
@@ -57,6 +55,7 @@ const Presentation: React.FC = () => {
   }, []);
 
   useEffect(() => {
+    setScrollTo(window.scrollY === 0 ? ScrollTo.Bottom : ScrollTo.Top);
     window.addEventListener("scroll", handleScrollEvent);
 
     return () => {
