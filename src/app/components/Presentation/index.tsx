@@ -1,5 +1,11 @@
 "use client";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import {
+  MouseEventHandler,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import styles from "./presentation.module.css";
 import { motion } from "framer-motion";
 import CtaButton from "../CtaButton";
@@ -58,7 +64,7 @@ const Presentation: React.FC = () => {
     };
   }, []);
 
-  const handleScrollClickEvent = (e: MouseEvent) => {
+  const handleScrollClickEvent: MouseEventHandler<HTMLAnchorElement> = (e) => {
     if (scrollTo === ScrollTo.Bottom) {
       setScrollTo(ScrollTo.Top);
       return;
