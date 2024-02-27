@@ -16,6 +16,7 @@ export const TECHS_TYPE_ORDER = [
   Techs.Frontend,
   Techs.Backend,
   Techs.Testing,
+  Techs.Database,
   Techs.Infra,
   Techs.Services,
   Techs.Utilities,
@@ -29,7 +30,8 @@ export const TECH_TYPE_COLOR: Record<Techs, string> = {
   [Techs.Infra]: "rgba(128, 0, 128, .6)", // Purple
   [Techs.Services]: "rgba(255, 165, 0, .6)", // Orange
   [Techs.Utilities]: "rgba(255, 255, 0, .6)", // Yellow
-  [Techs.MachineLearning]: "rgba(255, 192, 203, .6)", // Pink
+  [Techs.MachineLearning]: "rgba(255, 192, 203, .6)", // Pink,
+  [Techs.Database]: "rgba(0, 128, 128, .6)" // Teal
 };
 
 export const clusterTechs = (techs: Tech[]): Tech[] => {
