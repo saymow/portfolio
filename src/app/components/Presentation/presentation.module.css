@@ -28,19 +28,29 @@
 }
 
 .scroll_button {
+  position: fixed;
   cursor: pointer;
-  position: absolute;
   bottom: 1rem;
-  right: 0;
-
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: .8rem;
-  animation: sink 1500ms infinite ease;
+  background: var(--secondary-color);
+  animation: Sink 1500ms infinite ease;
+  z-index: 999;
 }
 
-@keyframes sink {
+.scroll_button_bottom {
+}
+
+.scroll_button_top {
+  transform: rotateX(180deg) !important;
+}
+
+@keyframes Sink {
   0% {
     transform: translateY(-10%);
   }
