@@ -1,3 +1,4 @@
+"use client";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import styles from "./presentation.module.css";
 import { motion } from "framer-motion";
@@ -33,7 +34,9 @@ const computeRef = (ref: Ref) => {
 
 const Presentation: React.FC = () => {
   const [refs, setReferences] = useState<Ref>({ y: 0, x: 0 });
-  const [scrollTo, setScrollTo] = useState<ScrollTo>(ScrollTo.Bottom);
+  const [scrollTo, setScrollTo] = useState<ScrollTo>(
+    window.scrollY === 0 ? ScrollTo.Bottom : ScrollTo.Top
+  );
 
   const handleScrollEvent = useCallback((_: Event) => {
     setScrollTo(window.scrollY === 0 ? ScrollTo.Bottom : ScrollTo.Top);
