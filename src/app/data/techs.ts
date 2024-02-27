@@ -45,7 +45,7 @@ export const Stack: Tech[] = [
   {
     kind: Links.Postgresql,
     url: "https://www.postgresql.org/",
-    type: Techs.Infra,
+    type: Techs.Database,
   },
   {
     kind: Links.Paypal,
@@ -80,7 +80,7 @@ export const Stack: Tech[] = [
   {
     kind: Links.Redis,
     url: "https://redis.io/",
-    type: Techs.Infra,
+    type: Techs.Database,
   },
   {
     kind: Links.Python,
@@ -165,12 +165,12 @@ export const Stack: Tech[] = [
   {
     kind: Links.MongoDB,
     url: "https://www.mongodb.com/",
-    type: Techs.Infra,
+    type: Techs.Database,
   },
   {
     kind: Links.MySQL,
     url: "https://www.mysql.com/",
-    type: Techs.Infra,
+    type: Techs.Database,
   },
   {
     kind: Links.Ethereum,

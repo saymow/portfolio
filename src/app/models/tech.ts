@@ -5,6 +5,7 @@ export enum Techs {
   Backend = "Backend",
   Testing = "Testing",
   Infra = "Infrastructure",
+  Database = "Database", 
   MachineLearning = "Machine Learning",
   Utilities = "Utilities",
   Services = "Services",

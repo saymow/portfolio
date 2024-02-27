@@ -55,7 +55,7 @@ export const Projects: Project[] = [
       {
         kind: Links.Postgresql,
         url: "https://www.postgresql.org/",
-        type: Techs.Infra,
+        type: Techs.Database,
       },
       {
         kind: Links.Paypal,
@@ -90,7 +90,7 @@ export const Projects: Project[] = [
       {
         kind: Links.Redis,
         url: "https://redis.io/",
-        type: Techs.Infra,
+        type: Techs.Database,
       },
       {
         kind: Links.Eslint,
