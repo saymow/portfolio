@@ -106,13 +106,16 @@ export const Projects: Project[] = [
   },
   {
     title: "Movies Recommender",
-    description: "A machine learning recommendation application.",
+    description:
+      "A machine learning recommendation application. Pick three movies and the model will predict a recommendation for you. It works best if the three movies are similar. You can find detailed explanation of how it works on the Github repository.",
     img_url: "/movies-recommender.png",
-    videos: [{
-      title: "Frontend",
-      url: "/movies-recommender.webm",
-      poster_url: "/movies-recommender.png",
-    }],
+    videos: [
+      {
+        title: "Frontend",
+        url: "/movies-recommender.webm",
+        poster_url: "/movies-recommender.png",
+      },
+    ],
     details_links: [
       {
         kind: Links.Live,
