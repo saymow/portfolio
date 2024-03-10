@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Gustavo Alves",
-  description: "Personal portofolio page",
+  description: "Personal portfolio page",
 };
 
 export default function RootLayout({
