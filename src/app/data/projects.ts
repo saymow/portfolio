@@ -15,7 +15,7 @@ export const Projects: Project[] = [
       },
       {
         title: "Run mode",
-        url: "/graph-run-sandbox-mode.mp4",
+        url: "/graph-run-mode.mp4",
         poster_url: "/graph-run-mode.png",
       },
       {
