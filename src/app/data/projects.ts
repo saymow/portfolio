@@ -4,6 +4,55 @@ import { Techs } from "../models/tech";
 
 export const Projects: Project[] = [
   {
+    title: "Graph",
+    description: "A visual and interactive sandbox for graph searches.",
+    img_url: "/graph-search.png",
+    videos: [
+      {
+        title: "Sandbox mode",
+        url: "/graph-sandbox-mode.mp4",
+        poster_url: "/graph-sandbox-mode.png",
+      },
+      {
+        title: "Run mode",
+        url: "/graph-run-sandbox-mode.mp4",
+        poster_url: "/graph-run-mode.png",
+      },
+      {
+        title: "Comparisson mode",
+        url: "/graph-comparisson-mode.mp4",
+        poster_url: "/graph-comparisson-mode.png",
+      },
+    ],
+    details_links: [
+      {
+        kind: Links.Github,
+        url: "https://github.com/saymow/graph",
+      },
+      {
+        kind: Links.Live,
+        url: "https://saymow.github.io/graph/",
+      },
+    ],
+    tech_stack_links: [
+      {
+        kind: Links.Javascript,
+        url: "https://www.javascript.com/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.Html,
+        url: "https://www.w3.org/html/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.CSS,
+        url: "https://www.w3.org/Style/CSS/",
+        type: Techs.Frontend,
+      },
+    ],
+  },
+  {
     title: "Ecommerce",
     description:
       "An E-commerce with payment integration, admin panel and automated tests.",
