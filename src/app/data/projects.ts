@@ -4,7 +4,7 @@ import { Techs } from "../models/tech";
 
 export const Projects: Project[] = [
   {
-    title: "Graph",
+    title: "Graph Search",
     description: "A visual and interactive sandbox for graph searches.",
     img_url: "/graph-search.png",
     videos: [
@@ -27,11 +27,11 @@ export const Projects: Project[] = [
     details_links: [
       {
         kind: Links.Github,
-        url: "https://github.com/saymow/graph",
+        url: "https://github.com/saymow/graph-search",
       },
       {
         kind: Links.Live,
-        url: "https://saymow.github.io/graph/",
+        url: "https://saymow.github.io/graph-search/",
       },
     ],
     tech_stack_links: [
