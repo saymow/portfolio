@@ -4,6 +4,84 @@ import { Techs } from "../models/tech";
 
 export const Projects: Project[] = [
   {
+    title: "Simpl programming language",
+    description: `!html 
+    <p>Simpl is a basic script language with arrays, structs, closure, I/O, and so on.</p>
+    
+    <br>
+
+    <h4>Playground code snippets: </h4>
+
+    <br>
+    
+    <ul>
+      <li>
+        <a target="_blank" href="https://saymow-simple.vercel.app?snippet=avg">Average Calculator 🔗</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://saymow-simple.vercel.app?snippet=bmi">Body Mass Index Calculator 🔗</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://saymow-simple.vercel.app?snippet=breadth_first_search">Breadth First Search 🔗</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://saymow-simple.vercel.app?snippet=insertion_sort">Insertion Sort 🔗</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://saymow-simple.vercel.app?snippet=linear_function">Linear Function 🔗</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://saymow-simple.vercel.app?snippet=todo_list">To-do List 🔗</a>
+      </li>
+    </ul>
+    `,
+    img_url: "/simpl.png",
+    videos: [
+      {
+        title: "Simpl playground",
+        url: "/simpl.mp4",
+        poster_url: "/simpl.png",
+      },
+    ],
+    details_links: [
+      {
+        kind: Links.Github,
+        url: "https://github.com/saymow/simpl",
+      },
+      {
+        kind: Links.Live,
+        url: "https://saymow-simple.vercel.app/",
+      },
+    ],
+    tech_stack_links: [
+      {
+        kind: Links.Node,
+        url: "https://nodejs.org/en/",
+        type: Techs.Backend,
+      },
+      {
+        kind: Links.React,
+        url: "https://reactjs.org/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.Typescript,
+        url: "https://www.typescriptlang.org/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.Html,
+        url: "https://www.w3.org/html/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.CSS,
+        url: "https://www.w3.org/Style/CSS/",
+        type: Techs.Frontend,
+      },
+    ],
+  },
+  {
     title: "Graph Search",
     description: "A visual and interactive sandbox for graph searches.",
     img_url: "/graph-search.png",

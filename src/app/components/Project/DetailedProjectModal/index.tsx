@@ -13,6 +13,24 @@ interface Props {
   onClose: () => void;
 }
 
+const STRIP_HTML_TAG = /^(!html)(\n|\s)*/;
+
+const isHtml = (content: string) => {
+  return content.startsWith("!html");
+};
+
+const stripHtmlTag = (content: string) => {
+  return content.replace(STRIP_HTML_TAG, "");
+};
+
+const ProjectDescription = ({ content }: { content: string }) => {
+  if (isHtml(content)) {
+    return <div dangerouslySetInnerHTML={{ __html: stripHtmlTag(content) }}></div>;
+  }
+
+  return <p>{content}</p>;
+};
+
 const DetailedProjectModal: React.FC<Props> = (props) => {
   const { isOpen, onClose, project } = props;
   const containerRef = useRef<HTMLDivElement>(null);
@@ -111,7 +129,6 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
             <h1>{project.title}</h1>
           </header>
           <article>
-            <p>{project.description}</p>
             {project.videos.length === 1 ? (
               <Video
                 key={project.videos[0].url}
@@ -139,6 +156,7 @@ const DetailedProjectModal: React.FC<Props> = (props) => {
                 </article>
               ))
             )}
+            <ProjectDescription content={project.description} />
             <LinksSection.Root title="More details:">
               <LinksSection.OrdinaryList list={project.details_links} />
             </LinksSection.Root>

@@ -87,6 +87,10 @@
   --header-height: 5rem;
 }
 
+.details_container ul {
+  list-style: none;
+}
+
 .details_container > header {
   text-align: center;
   height: var(--header-height);
