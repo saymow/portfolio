@@ -6,7 +6,16 @@ export const Projects: Project[] = [
   {
     title: "Simpl programming language",
     description: `!html 
-    <p>Simpl is a basic script language with arrays, structs, closure, I/O, and so on.</p>
+    <h3>Simpl</h3>
+    <br>
+    <p>Simpl is a simple OOP bytecode script language.</p>
+
+    <br>
+    <br>
+
+    <h3>Simpl Web</h3>
+    <br>
+    <p>Simpl Web is a basic script language with arrays, structs, closure, I/O, and so on.</p>
     
     <br>
 
@@ -56,7 +65,7 @@ export const Projects: Project[] = [
       },
       {
         kind: Links.Live,
-        url: "https://saymow-simple.vercel.app/",
+        url: "https://simpl-web-programming-language.vercel.app",
       },
     ],
     tech_stack_links: [
