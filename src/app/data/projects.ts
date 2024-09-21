@@ -8,7 +8,7 @@ export const Projects: Project[] = [
     description: `!html 
     <h3>Simpl</h3>
     <br>
-    <p>Simpl is a simple OOP bytecode script language.</p>
+    <p><a href="https://github.com/saymow/simpl" target="_blank">Simpl</a> is a simple parallel OOP bytecode script language.</p>
 
     <br>
     <br>
