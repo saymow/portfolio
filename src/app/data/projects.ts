@@ -198,56 +198,7 @@ export const Projects: Project[] = [
     ],
   },
   {
-    title: "Graph Search",
-    description: "A visual and interactive sandbox for graph searches.",
-    img_url: "/graph-search.png",
-    videos: [
-      {
-        title: "Sandbox mode",
-        url: "/graph-sandbox-mode.mp4",
-        poster_url: "/graph-sandbox-mode.png",
-      },
-      {
-        title: "Run mode",
-        url: "/graph-run-mode.mp4",
-        poster_url: "/graph-run-mode.png",
-      },
-      {
-        title: "Comparisson mode",
-        url: "/graph-comparisson-mode.mp4",
-        poster_url: "/graph-comparisson-mode.png",
-      },
-    ],
-    details_links: [
-      {
-        kind: Links.Github,
-        url: "https://github.com/saymow/graph-search",
-      },
-      {
-        kind: Links.Live,
-        url: "https://saymow.github.io/graph-search/",
-      },
-    ],
-    tech_stack_links: [
-      {
-        kind: Links.Javascript,
-        url: "https://www.javascript.com/",
-        type: Techs.Frontend,
-      },
-      {
-        kind: Links.Html,
-        url: "https://www.w3.org/html/",
-        type: Techs.Frontend,
-      },
-      {
-        kind: Links.CSS,
-        url: "https://www.w3.org/Style/CSS/",
-        type: Techs.Frontend,
-      },
-    ],
-  },
-  {
-    title: "Movies Recommender",
+    title: "Recommender system model",
     description:
       "A machine learning recommendation application. Pick three movies and the model will predict a recommendation for you. It works best if the three movies are similar. You can find detailed explanation of how it works on the Github repository.",
     img_url: "/movies-recommender.png",
@@ -313,6 +264,55 @@ export const Projects: Project[] = [
         kind: Links.Javascript,
         url: "https://www.javascript.com/",
         type: Techs.Backend,
+      },
+    ],
+  },
+  {
+    title: "Graph Search",
+    description: "A visual and interactive sandbox for graph searches.",
+    img_url: "/graph-search.png",
+    videos: [
+      {
+        title: "Sandbox mode",
+        url: "/graph-sandbox-mode.mp4",
+        poster_url: "/graph-sandbox-mode.png",
+      },
+      {
+        title: "Run mode",
+        url: "/graph-run-mode.mp4",
+        poster_url: "/graph-run-mode.png",
+      },
+      {
+        title: "Comparisson mode",
+        url: "/graph-comparisson-mode.mp4",
+        poster_url: "/graph-comparisson-mode.png",
+      },
+    ],
+    details_links: [
+      {
+        kind: Links.Github,
+        url: "https://github.com/saymow/graph-search",
+      },
+      {
+        kind: Links.Live,
+        url: "https://saymow.github.io/graph-search/",
+      },
+    ],
+    tech_stack_links: [
+      {
+        kind: Links.Javascript,
+        url: "https://www.javascript.com/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.Html,
+        url: "https://www.w3.org/html/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.CSS,
+        url: "https://www.w3.org/Style/CSS/",
+        type: Techs.Frontend,
       },
     ],
   },
