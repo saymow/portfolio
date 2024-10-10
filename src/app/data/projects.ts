@@ -4,6 +4,107 @@ import { Techs } from "../models/tech";
 
 export const Projects: Project[] = [
   {
+    title: "Ecommerce",
+    description:
+      "An E-commerce with payment integration, admin panel and automated tests.",
+    img_url: "/ecommerce.png",
+    videos: [
+      {
+        title: "Frontend",
+        url: "/ecommerce.mp4",
+        poster_url: "/ecommerce.png",
+      },
+      {
+        title: "Admin panel",
+        url: "/ecommerce-admin.mp4",
+        poster_url: "/ecommerce-admin.png",
+      },
+    ],
+    details_links: [
+      {
+        kind: Links.Github,
+        url: "https://github.com/saymow/e-commerce-2.0",
+      },
+    ],
+    tech_stack_links: [
+      {
+        kind: Links.Node,
+        url: "https://nodejs.org/en/",
+        type: Techs.Backend,
+      },
+      {
+        kind: Links.React,
+        url: "https://reactjs.org/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.Typescript,
+        url: "https://www.typescriptlang.org/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.Nextjs,
+        url: "https://nextjs.org/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.Cypress,
+        url: "https://www.cypress.io/",
+        type: Techs.Testing,
+      },
+      {
+        kind: Links.Postgresql,
+        url: "https://www.postgresql.org/",
+        type: Techs.Database,
+      },
+      {
+        kind: Links.Paypal,
+        url: "https://www.paypal.com/",
+        type: Techs.Services,
+      },
+      {
+        kind: Links.Jest,
+        url: "https://jestjs.io/",
+        type: Techs.Testing,
+      },
+      {
+        kind: Links.Redux,
+        url: "https://redux.js.org/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.StyledComponents,
+        url: "https://styled-components.com/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.Bootstrap,
+        url: "https://getbootstrap.com/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.Express,
+        url: "https://expressjs.com/",
+        type: Techs.Backend,
+      },
+      {
+        kind: Links.Redis,
+        url: "https://redis.io/",
+        type: Techs.Database,
+      },
+      {
+        kind: Links.Eslint,
+        url: "https://eslint.org/",
+        type: Techs.Utilities,
+      },
+      {
+        kind: Links.Prettier,
+        url: "https://prettier.io/",
+        type: Techs.Utilities,
+      },
+    ],
+  },
+  {
     title: "Simpl programming language",
     description: `!html 
     <h3>Simpl</h3>
@@ -142,107 +243,6 @@ export const Projects: Project[] = [
         kind: Links.CSS,
         url: "https://www.w3.org/Style/CSS/",
         type: Techs.Frontend,
-      },
-    ],
-  },
-  {
-    title: "Ecommerce",
-    description:
-      "An E-commerce with payment integration, admin panel and automated tests.",
-    img_url: "/ecommerce.png",
-    videos: [
-      {
-        title: "Frontend",
-        url: "/ecommerce.mp4",
-        poster_url: "/ecommerce.png",
-      },
-      {
-        title: "Admin panel",
-        url: "/ecommerce-admin.mp4",
-        poster_url: "/ecommerce-admin.png",
-      },
-    ],
-    details_links: [
-      {
-        kind: Links.Github,
-        url: "https://github.com/saymow/e-commerce-2.0",
-      },
-    ],
-    tech_stack_links: [
-      {
-        kind: Links.Node,
-        url: "https://nodejs.org/en/",
-        type: Techs.Backend,
-      },
-      {
-        kind: Links.React,
-        url: "https://reactjs.org/",
-        type: Techs.Frontend,
-      },
-      {
-        kind: Links.Typescript,
-        url: "https://www.typescriptlang.org/",
-        type: Techs.Frontend,
-      },
-      {
-        kind: Links.Nextjs,
-        url: "https://nextjs.org/",
-        type: Techs.Frontend,
-      },
-      {
-        kind: Links.Cypress,
-        url: "https://www.cypress.io/",
-        type: Techs.Testing,
-      },
-      {
-        kind: Links.Postgresql,
-        url: "https://www.postgresql.org/",
-        type: Techs.Database,
-      },
-      {
-        kind: Links.Paypal,
-        url: "https://www.paypal.com/",
-        type: Techs.Services,
-      },
-      {
-        kind: Links.Jest,
-        url: "https://jestjs.io/",
-        type: Techs.Testing,
-      },
-      {
-        kind: Links.Redux,
-        url: "https://redux.js.org/",
-        type: Techs.Frontend,
-      },
-      {
-        kind: Links.StyledComponents,
-        url: "https://styled-components.com/",
-        type: Techs.Frontend,
-      },
-      {
-        kind: Links.Bootstrap,
-        url: "https://getbootstrap.com/",
-        type: Techs.Frontend,
-      },
-      {
-        kind: Links.Express,
-        url: "https://expressjs.com/",
-        type: Techs.Backend,
-      },
-      {
-        kind: Links.Redis,
-        url: "https://redis.io/",
-        type: Techs.Database,
-      },
-      {
-        kind: Links.Eslint,
-        url: "https://eslint.org/",
-        type: Techs.Utilities,
-      },
-      {
-        kind: Links.Prettier,
-        url: "https://prettier.io/",
-        type: Techs.Utilities,
       },
     ],
   },
