@@ -69,7 +69,7 @@ const Contacts = () => {
           </motion.article>
         </a>
         <a
-          href="https://docs.google.com/document/d/1hrInToGlvEOZcEEIePVmVA7k4JMjW8gWD2H5-lIdxEc/edit?usp=sharing"
+          href="https://docs.google.com/document/d/1lCX6R7cx0wpxCWhyCdpVyIiJUbIdotZW/edit?usp=sharing&ouid=111730928345408967975&rtpof=true&sd=true"
           target="_blank"
         >
           <motion.article

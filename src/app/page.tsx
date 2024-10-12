@@ -23,7 +23,6 @@ export default function Home() {
       <Projects projects={ProjectsData} />
       <TechStack techs={Stack} />
       <Contacts />
-      
     </main>
   );
 }
