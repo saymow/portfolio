@@ -4,6 +4,7 @@ import { Techs } from "../models/tech";
 
 export const Projects: Project[] = [
   {
+    slug: "e-commerce",
     title: "Ecommerce",
     description:
       "An E-commerce with payment integration, admin panel and automated tests.",
@@ -105,6 +106,7 @@ export const Projects: Project[] = [
     ],
   },
   {
+    slug: "simpl",
     title: "Simpl programming language",
     description: `!html 
     <h3>Simpl</h3>
@@ -198,7 +200,8 @@ export const Projects: Project[] = [
     ],
   },
   {
-    title: "Recommender system model",
+    slug: "movies-recommender",
+    title: "Recommender system",
     description:
       "A machine learning recommendation application. Pick three movies and the model will predict a recommendation for you. It works best if the three movies are similar. You can find detailed explanation of how it works on the Github repository.",
     img_url: "/movies-recommender.png",
@@ -268,6 +271,7 @@ export const Projects: Project[] = [
     ],
   },
   {
+    slug: "graph-search",
     title: "Graph Search",
     description: "A visual and interactive sandbox for graph searches.",
     img_url: "/graph-search.png",

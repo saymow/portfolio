@@ -8,6 +8,7 @@ interface Video {
 }
 
 export interface Project {
+  slug: string;
   title: string;
   description: string;
   img_url: string;

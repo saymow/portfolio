@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { populateLinksIcon } from "../utils";
-import { Link } from "@/app/models/link";
+import { Link } from "@/models/link";
 import Box from "../../Box";
 import styles from './ordinary-list.module.css'
 

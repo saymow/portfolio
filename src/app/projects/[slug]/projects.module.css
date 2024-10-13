@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.navigate_button {
+  position: absolute;
+  top: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.title {
+  align-self: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.additional_details {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project_description p,
+.project_description a {
+  color: var(--text-secondary);
+}
+
+.project_description li {
+  list-style: none;
+}

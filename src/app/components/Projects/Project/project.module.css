@@ -7,12 +7,8 @@
   gap: 1rem;
 }
 
-.image_section {
-  position: relative;
-  cursor: zoom-in;
-  transition: 500ms;
+.image_link {
   width: 100%;
-  background: var(--secondary-color);
 }
 
 .title {

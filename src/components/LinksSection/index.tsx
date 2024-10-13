@@ -1,7 +1,6 @@
-import Box, { Props as BoxLink } from "@/app/components/Box";
-import styles from "./links-section.module.css";
 import OrdinaryList from "./OrdinaryLIst";
 import TechList from "./TechList";
+import styles from "./links-section.module.css";
 
 interface Props {
   title: string;

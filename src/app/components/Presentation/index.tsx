@@ -61,7 +61,7 @@ const Presentation: React.FC = () => {
     return () => {
       window.removeEventListener("scroll", handleScrollEvent);
     };
-  }, []);
+  }, [handleScrollEvent]);
 
   const handleScrollClickEvent: MouseEventHandler<HTMLAnchorElement> = (e) => {
     if (scrollTo === ScrollTo.Bottom) {

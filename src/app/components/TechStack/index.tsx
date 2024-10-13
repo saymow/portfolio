@@ -1,5 +1,5 @@
-import { Tech } from "@/app/models/tech";
-import { LinksSection } from "../LinksSection";
+import { Tech } from "@/models/tech";
+import { LinksSection } from "@/components/LinksSection";
 import styles from "./tech-stack.module.css";
 import { motion } from "framer-motion";
 

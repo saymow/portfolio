@@ -1,6 +1,6 @@
-import { Project as ProjectModel } from "@/app/models/project";
+import { Project as ProjectModel } from "@/models/project";
+import Project from "./Project";
 import styles from "./projects.module.css";
-import Project from "../Project";
 
 interface Props {
   projects: ProjectModel[];

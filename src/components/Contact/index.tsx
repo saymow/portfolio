@@ -1,14 +1,18 @@
-import { motion } from "framer-motion";
-import styles from "./contacts.module.css";
-import { Whatsapp } from "@styled-icons/boxicons-logos/Whatsapp";
-import { Email } from "@styled-icons/material-outlined/Email";
+import { FileEarmarkCheckFill } from "@styled-icons/bootstrap/FileEarmarkCheckFill";
 import { Github } from "@styled-icons/boxicons-logos/Github";
 import { LinkedinSquare } from "@styled-icons/boxicons-logos/LinkedinSquare";
-import { FileEarmarkCheckFill } from "@styled-icons/bootstrap/FileEarmarkCheckFill";
+import { Whatsapp } from "@styled-icons/boxicons-logos/Whatsapp";
+import { Email } from "@styled-icons/material-outlined/Email";
+import { motion } from "framer-motion";
+import styles from "./contacts.module.css";
 
-const Contacts = () => {
+interface Props {
+  id?: string;
+}
+
+const Contacts = (props: Props) => {
   return (
-    <section id="contacts" className={styles.container}>
+    <section id={props.id} className={styles.container}>
       <h2>{"Let's work together"}</h2>
       <section className={styles.cards_container}>
         <a

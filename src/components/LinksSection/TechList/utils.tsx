@@ -177,9 +177,10 @@ export const makeClusterElements = (
 };
 
 export const computeClusterElements = (
-  root: HTMLElement,
+  root: HTMLElement | null,
   clusteredTechs: Tech[]
 ): React.ReactNode => {
+  if (!root) return null;
   const rootRect = root.getBoundingClientRect();
   const childrenRects = Array.from(root.children).map((el) =>
     el.getBoundingClientRect()
