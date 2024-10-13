@@ -1,4 +1,4 @@
-import { Tech, Techs } from "@/app/models/tech";
+import { Tech, Techs } from "@/models/tech";
 import styles from "./tech-list.module.css";
 
 export interface Rect {

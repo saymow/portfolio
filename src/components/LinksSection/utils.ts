@@ -1,7 +1,7 @@
-import { makeLinkIcon } from "@/app/helpers/get-link-icon";
+import { makeLinkIcon } from "@/helpers/get-link-icon";
 import { Props as BoxLink } from "../Box";
-import { Tech } from "@/app/models/tech";
-import { Link } from "@/app/models/link";
+import { Tech } from "@/models/tech";
+import { Link } from "@/models/link";
 
 export function populateLinksIcon<T extends Link | Tech>(
   techs: T[]

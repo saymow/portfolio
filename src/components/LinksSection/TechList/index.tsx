@@ -1,5 +1,5 @@
-import Box from "@/app/components/Box";
-import { Tech } from "@/app/models/tech";
+import Box from "@/components/Box";
+import { Tech } from "@/models/tech";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { populateLinksIcon } from "../utils";
 import styles from "./tech-list.module.css";
