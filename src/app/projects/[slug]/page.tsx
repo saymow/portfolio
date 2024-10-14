@@ -64,6 +64,7 @@ const Project = () => {
           poster={project.img_url}
           className={styles.backdrop_video}
           controls
+          autoPlay
           width="100%"
           height="auto"
         />
