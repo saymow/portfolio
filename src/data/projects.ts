@@ -118,7 +118,7 @@ export const Projects: Project[] = [
 
     <h3>Simpl Web</h3>
     <br>
-    <p>Simpl Web is a basic script language with arrays, structs, closure, I/O, and so on.</p>
+    <p><a href="https://github.com/saymow/simpl-web" target="_blank">Simpl Web</a> is a basic script language with arrays, structs, closure, I/O, and so on.</p>
     
     <br>
 
@@ -128,28 +128,28 @@ export const Projects: Project[] = [
     
     <ul>
       <li>
-        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=lexer">Lexer 🔗</a>
+        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=lexer">Lexer</a>
       </li>
       <li>
-        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=dijkstra">Dijkstra 🔗</a>
+        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=dijkstra">Dijkstra</a>
       </li>
       <li>
-        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=breadth_first_search">Breadth First Search 🔗</a>
+        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=breadth_first_search">Breadth First Search</a>
       </li>
       <li>
-        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=linear_function">Linear Function 🔗</a>
+        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=linear_function">Linear Function</a>
       </li>
       <li>
-        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=todo_list">To-do List 🔗</a>
+        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=todo_list">To-do List</a>
       </li>
       <li>
-        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=insertion_sort">Insertion Sort 🔗</a>
+        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=insertion_sort">Insertion Sort</a>
       </li>
       <li>
-        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=avg">Average Calculator 🔗</a>
+        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=avg">Average Calculator</a>
       </li>
       <li>
-        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=bmi">Body Mass Index Calculator 🔗</a>
+        <a target="_blank" href="https://simpl-web-programming-language.vercel.app/?snippet=bmi">Body Mass Index Calculator</a>
       </li>
     </ul>
     `,

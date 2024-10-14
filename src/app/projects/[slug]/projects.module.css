@@ -35,6 +35,10 @@
   color: var(--text-secondary);
 }
 
+.project_description a {
+  text-decoration: underline;
+}
+
 .project_description li {
   list-style: none;
 }
