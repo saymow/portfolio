@@ -66,6 +66,7 @@ const Presentation: React.FC = () => {
   const handleScrollClickEvent: MouseEventHandler<HTMLAnchorElement> = (e) => {
     if (scrollTo === ScrollTo.Bottom) {
       setScrollTo(ScrollTo.Top);
+      document.querySelector('[data-id="projects"]')?.scrollIntoView();
       return;
     }
 
@@ -108,8 +109,7 @@ const Presentation: React.FC = () => {
         </div>
         <CtaButton text={"Contact me"} href="#contacts" />
       </motion.article>
-      <motion.a
-        href="#projects"
+      <motion.span
         onClick={handleScrollClickEvent}
         className={`${styles.scroll_button} ${
           scrollTo === ScrollTo.Top
@@ -122,7 +122,7 @@ const Presentation: React.FC = () => {
         whileTap={{ opacity: 0.2 }}
       >
         <ChevronDoubleDown height="2rem" width="2rem" />
-      </motion.a>
+      </motion.span>
     </section>
   );
 };

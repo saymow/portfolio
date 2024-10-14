@@ -10,7 +10,7 @@ const Projects: React.FC<Props> = (props) => {
   const { projects } = props;
 
   return (
-    <section id="projects" className={styles.container}>
+    <section data-id="projects" className={styles.container}>
       <h2>Featured Projects</h2>
       <article>
         {projects.map((project) => (

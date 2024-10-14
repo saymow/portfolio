@@ -11,7 +11,7 @@ const TechStack: React.FC<Props> = (props) => {
   const { techs } = props;
 
   return (
-    <section id="stack" className={styles.container}>
+    <section data-id="stack" className={styles.container}>
       <h2>Tech Stack</h2>
       <motion.div
         initial={{ opacity: 0, transform: "translateY(10%)" }}

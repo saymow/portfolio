@@ -12,7 +12,7 @@ interface Props {
 
 const Contacts = (props: Props) => {
   return (
-    <section id={props.id} className={styles.container}>
+    <section data-id={props.id} className={styles.container}>
       <h2>{"Let's work together"}</h2>
       <section className={styles.cards_container}>
         <a

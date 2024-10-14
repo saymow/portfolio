@@ -33,7 +33,7 @@
   border-right: 1px solid var(--secondary-color);
 }
 
-.item a {
+.item span {
   cursor: pointer;
   display: flex;
   justify-content: center;

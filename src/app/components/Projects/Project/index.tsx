@@ -17,7 +17,7 @@ const Project: React.FC<Props> = (props) => {
         <h1 className={styles.title}>{project.title}</h1>
         <Link
           className={styles.image_link}
-          href={`/projects/${project.slug}`}
+          href={`projects/${project.slug}`}
         >
           <motion.section
             title={project.title}
