@@ -277,6 +277,11 @@ export const Projects: Project[] = [
     img_url: "/graph-search.png",
     videos: [
       {
+        title: "Comparisson mode",
+        url: "/graph-comparisson-mode.mp4",
+        poster_url: "/graph-comparisson-mode.png",
+      },
+      {
         title: "Sandbox mode",
         url: "/graph-sandbox-mode.mp4",
         poster_url: "/graph-sandbox-mode.png",
@@ -285,11 +290,6 @@ export const Projects: Project[] = [
         title: "Run mode",
         url: "/graph-run-mode.mp4",
         poster_url: "/graph-run-mode.png",
-      },
-      {
-        title: "Comparisson mode",
-        url: "/graph-comparisson-mode.mp4",
-        poster_url: "/graph-comparisson-mode.png",
       },
     ],
     details_links: [
