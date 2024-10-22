@@ -274,12 +274,12 @@ export const Projects: Project[] = [
     slug: "graph-search",
     title: "Graph Search",
     description: "A visual and interactive sandbox for graph searches.",
-    img_url: "/graph-search.png",
+    img_url: "/graph-full-comparisson-mode.png",
     videos: [
       {
         title: "Comparisson mode",
-        url: "/graph-comparisson-mode.mp4",
-        poster_url: "/graph-comparisson-mode.png",
+        url: "/graph-full-comparisson-mode.mp4",
+        poster_url: "/graph-full-comparisson-mode.png",
       },
       {
         title: "Sandbox mode",
