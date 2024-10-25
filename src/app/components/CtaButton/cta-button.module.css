@@ -8,6 +8,7 @@
   overflow: hidden;
   width: 10rem;
   height: 3rem;
+  border: none;
 }
 
 .cta_button::before {
@@ -43,6 +44,7 @@
   width: calc(100% - 2 * 1px);
   background: inherit;
   border-radius: inherit;
+  color: var(--text-primary);
 
   display: flex;
   align-items: center;

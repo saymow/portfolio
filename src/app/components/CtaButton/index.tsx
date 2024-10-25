@@ -2,21 +2,22 @@ import React from "react";
 import styles from "./cta-button.module.css";
 import { motion } from "framer-motion";
 
-interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface Props {
   text: string;
+  onClick: VoidFunction;
 }
 
-const CtaButton: React.FC<Props> = ({ text, ...rest }) => {
+const CtaButton: React.FC<Props> = ({ text, onClick }) => {
   return (
-    <motion.a
+    <motion.button
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       whileHover={{ opacity: 0.6 }}
       whileTap={{ scale: 0.95 }}
       className={styles.cta_button}
-      {...(rest as any)}
+      onClick={onClick}
       data-text={text}
-    ></motion.a>
+    ></motion.button>
   );
 };
 

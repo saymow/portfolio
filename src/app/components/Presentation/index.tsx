@@ -3,6 +3,7 @@ import {
   MouseEventHandler,
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useState,
 } from "react";
@@ -54,7 +55,7 @@ const Presentation: React.FC = () => {
     };
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setScrollTo(window.scrollY === 0 ? ScrollTo.Bottom : ScrollTo.Top);
     window.addEventListener("scroll", handleScrollEvent);
 
@@ -72,6 +73,11 @@ const Presentation: React.FC = () => {
 
     e.preventDefault();
     window.scrollTo(0, 0);
+  };
+
+  const handleScrollToContacts = () => {
+    setScrollTo(ScrollTo.Top);
+    document.querySelector('[data-id="contacts"]')?.scrollIntoView();
   };
 
   const description = useMemo(
@@ -107,7 +113,7 @@ const Presentation: React.FC = () => {
           </motion.h2>
           <h4>{description}</h4>
         </div>
-        <CtaButton text={"Contact me"} href="#contacts" />
+        <CtaButton text={"Contact me"} onClick={handleScrollToContacts} />
       </motion.article>
       <motion.span
         onClick={handleScrollClickEvent}
