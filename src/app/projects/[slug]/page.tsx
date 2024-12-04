@@ -6,7 +6,7 @@ import Layout from "@/components/Layout";
 import { Projects } from "@/data/projects";
 import { motion } from "framer-motion";
 import styles from "./projects.module.css";
-import Video from "@/app/projects/[slug]/Video";
+import Video from "@/components/Video";
 import { LinksSection } from "@/components/LinksSection";
 import Contact from "@/components/Contact";
 import { ArrowLeftLong } from "@styled-icons/fa-solid/ArrowLeftLong";

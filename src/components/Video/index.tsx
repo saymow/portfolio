@@ -26,6 +26,7 @@ const Video: React.FC<Props> = (props) => {
       controls={controls}
       preload={preload}
       poster={poster}
+      muted
     >
       <source src={src} type="video/mp4" />
       Your browser does not support the video tag.

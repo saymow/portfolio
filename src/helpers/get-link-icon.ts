@@ -41,11 +41,13 @@ import { Createreactapp } from "@styled-icons/simple-icons/Createreactapp";
 import { Prettier } from "@styled-icons/simple-icons/Prettier";
 import { Eslint } from "@styled-icons/simple-icons/Eslint";
 import { Webcomponentsdotorg } from "@styled-icons/simple-icons/Webcomponentsdotorg";
+import { GoLang } from '@styled-icons/boxicons-logos/GoLang'
 
 const LINK_ICON_MAP: Record<Links, StyledIcon> = {
   [Links.Live]: Browser,
   [Links.Github]: Github,
   [Links.React]: ReactLogo,
+  [Links.Golang]: GoLang,
   [Links.Node]: Nodejs,
   [Links.Typescript]: Typescript,
   [Links.Nextjs]: Nextdotjs,
