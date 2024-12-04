@@ -3,6 +3,7 @@ export enum Links {
   Github = "Github",
   React = "React",
   Node = "Node",
+  Golang = "Golang",
   Typescript = "Typescript",
   Nextjs = "Nextjs",
   Cypress = "Cypress",

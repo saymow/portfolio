@@ -8,6 +8,11 @@ export const Stack: Tech[] = [
     type: Techs.Backend,
   },
   {
+    kind: Links.Golang,
+    url: "https://go.dev/",
+    type: Techs.Backend,
+  },
+  {
     kind: Links.NestJS,
     url: "https://nestjs.com/",
     type: Techs.Backend,
@@ -81,11 +86,6 @@ export const Stack: Tech[] = [
     kind: Links.Redis,
     url: "https://redis.io/",
     type: Techs.Database,
-  },
-  {
-    kind: Links.Python,
-    url: "https://www.python.org/",
-    type: Techs.Backend,
   },
   {
     kind: Links.Numpy,
