@@ -11,7 +11,7 @@ export interface Project {
   slug: string;
   title: string;
   description: string;
-  img_url: string;
+  img_url?: string;
   videos: Video[];
   details_links: Link[];
   tech_stack_links: Tech[];

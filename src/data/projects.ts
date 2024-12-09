@@ -200,6 +200,82 @@ export const Projects: Project[] = [
     ],
   },
   {
+    slug: "vcs-version-control-system",
+    title: "VCS - Version Control System",
+    description:
+      "A version control system implemented in go.",
+    videos: [
+      {
+        title: "Demo",
+        url: "/vcs.webm",
+        poster_url: "/ecommerce.png",
+      }
+    ],
+    details_links: [
+      {
+        kind: Links.Github,
+        url: "https://github.com/saymow/vcs",
+      },
+    ],
+    tech_stack_links: [
+      {
+        kind: Links.Golang,
+        url: "https://go.dev/",
+        type: Techs.Backend,
+      },
+    ],
+  },
+  {
+    slug: "graph-search",
+    title: "Graph Search",
+    description: "A visual and interactive sandbox for graph searches.",
+    img_url: "/graph-full-comparisson-mode.png",
+    videos: [
+      {
+        title: "Comparisson mode",
+        url: "/graph-full-comparisson-mode.mp4",
+        poster_url: "/graph-full-comparisson-mode.png",
+      },
+      {
+        title: "Sandbox mode",
+        url: "/graph-sandbox-mode.mp4",
+        poster_url: "/graph-sandbox-mode.png",
+      },
+      {
+        title: "Run mode",
+        url: "/graph-run-mode.mp4",
+        poster_url: "/graph-run-mode.png",
+      },
+    ],
+    details_links: [
+      {
+        kind: Links.Github,
+        url: "https://github.com/saymow/graph-search",
+      },
+      {
+        kind: Links.Live,
+        url: "https://saymow.github.io/graph-search/",
+      },
+    ],
+    tech_stack_links: [
+      {
+        kind: Links.Javascript,
+        url: "https://www.javascript.com/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.Html,
+        url: "https://www.w3.org/html/",
+        type: Techs.Frontend,
+      },
+      {
+        kind: Links.CSS,
+        url: "https://www.w3.org/Style/CSS/",
+        type: Techs.Frontend,
+      },
+    ],
+  },
+  {
     slug: "movies-recommender",
     title: "Recommender system",
     description:
@@ -267,56 +343,6 @@ export const Projects: Project[] = [
         kind: Links.Javascript,
         url: "https://www.javascript.com/",
         type: Techs.Backend,
-      },
-    ],
-  },
-  {
-    slug: "graph-search",
-    title: "Graph Search",
-    description: "A visual and interactive sandbox for graph searches.",
-    img_url: "/graph-full-comparisson-mode.png",
-    videos: [
-      {
-        title: "Comparisson mode",
-        url: "/graph-full-comparisson-mode.mp4",
-        poster_url: "/graph-full-comparisson-mode.png",
-      },
-      {
-        title: "Sandbox mode",
-        url: "/graph-sandbox-mode.mp4",
-        poster_url: "/graph-sandbox-mode.png",
-      },
-      {
-        title: "Run mode",
-        url: "/graph-run-mode.mp4",
-        poster_url: "/graph-run-mode.png",
-      },
-    ],
-    details_links: [
-      {
-        kind: Links.Github,
-        url: "https://github.com/saymow/graph-search",
-      },
-      {
-        kind: Links.Live,
-        url: "https://saymow.github.io/graph-search/",
-      },
-    ],
-    tech_stack_links: [
-      {
-        kind: Links.Javascript,
-        url: "https://www.javascript.com/",
-        type: Techs.Frontend,
-      },
-      {
-        kind: Links.Html,
-        url: "https://www.w3.org/html/",
-        type: Techs.Frontend,
-      },
-      {
-        kind: Links.CSS,
-        url: "https://www.w3.org/Style/CSS/",
-        type: Techs.Frontend,
       },
     ],
   },
