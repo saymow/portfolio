@@ -207,8 +207,7 @@ export const Projects: Project[] = [
     videos: [
       {
         title: "Demo",
-        url: "/vcs.webm",
-        poster_url: "/ecommerce.png",
+        url: "/vcs.mp4",
       }
     ],
     details_links: [

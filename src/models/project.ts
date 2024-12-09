@@ -3,7 +3,7 @@ import { Tech } from "./tech";
 
 interface Video {
   title: string;
-  poster_url: string;
+  poster_url?: string;
   url: string;
 }
 
